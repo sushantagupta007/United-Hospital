@@ -74,15 +74,15 @@ const Registraion = () => {
                 <Row>
                     <Col>
                     <Form.Group required onBlur={handlePatientName} className="mb-3" controlId="formGridAddress1">
-                        <Form.Label className="fw-bold">Patient Name</Form.Label>
+                        <Form.Label className="fw-bold">Patient Name (Mandatory) </Form.Label>
                         <Form.Control type="text" placeholder="Susan Foster" />
                     </Form.Group>
                     <Form.Group required  onBlur = {handleEmail} className="mb-3" controlId="formGridAddress1">
-                        <Form.Label className="fw-bold">Email</Form.Label>
+                        <Form.Label className="fw-bold">Email (Mandatory)</Form.Label>
                         <Form.Control type="email" placeholder="email@gmail.com" />
                     </Form.Group>
                     <Form.Group required  onBlur={handlePassword} className="mb-3" controlId="formGridAddress1">
-                        <Form.Label className="fw-bold">Password</Form.Label>
+                        <Form.Label className="fw-bold">Password (Mandatory)</Form.Label>
                         <Form.Control type="password" placeholder="your password" />
                     </Form.Group>
                     </Col>
