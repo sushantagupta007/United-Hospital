@@ -15,17 +15,19 @@ import Services from './Component/Services/Services';
 import Contact from './Component/Contact/Contact'
 import NotFound from './Component/NotFound/NotFound';
 import Login from './Component/Login/Login';
-import AuthProvider from './Context/AuthProvider';
+
 
 import Service from './Component/Service/Service';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import Footer from './Component/Footer/Footer';
+import AuthProvider from './Context/AuthProvider';
 
 
 function App() {
   return (
-    <AuthProvider>
-<Router>
+<AuthProvider>
+    <Router>
+
          <Header></Header>
         <Switch>
           

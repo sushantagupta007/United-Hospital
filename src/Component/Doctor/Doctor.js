@@ -3,7 +3,7 @@ import {Card,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Doctor = (props) => {
-    const {id,name,Designation, Biography, Degree,img} = props.team
+    const {id,name,Designation, Degree,img} = props.team
     return (
         
         <Card style={{ width: '18rem',}} className="mb-5">

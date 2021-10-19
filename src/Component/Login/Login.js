@@ -1,81 +1,112 @@
 import React from 'react';
 import { Form, Button, Col, Row, Container } from 'react-bootstrap';
-import useAuth from '../Hooks/useAuth'
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from 'react';
+import useFire from './../Hooks/useFire';
+import { useState} from 'react';
 import { useHistory, useLocation } from 'react-router';
 
+import { getAuth, signInWithEmailAndPassword,onAuthStateChanged,sendSignInLinkToEmail} from "firebase/auth";
+import { useEffect } from 'react';
+
+
+
+
+
 const Login = () => {
-        const {googleuserCreate} = useAuth(); 
-        const [email,setEmail] = useState('')
-        const [password,setPassWord] = useState('')
-        const location= useLocation(); 
-        let history1 = useHistory(); 
-        const redirectUrl = location.state?.from ||'/Service'
+        const {googleSignIn}= useFire();
+        
+        const [email,setEmail] = useState(''); 
+        const [password, setPassWord] = useState('');
+        const [user,setUser] = useState({}); 
+        const location = useLocation(); 
 
-        const handleGoogleSignin = () =>{
+        const redirect = location.state?.from || '/Home'
+
+        const history = useHistory(); 
+
+        const handlegoogleSignIn =() =>{
+            googleSignIn()
+            .then((result) => {
+                const user = result.user; 
+                console.log(user)
             
-            googleuserCreate()
-            .then((result) => {
-                const user = result.user;
-                history1.push(redirectUrl)
-                console.log(user); 
-            })
-        }
-
-        const handleEmail =(e)=>{
-                setEmail(e.target.value)
-        }
-
-        const handlePassword = (e) =>{
-            setPassWord(e.target.value)
-        }
-
-        const handSignIn = () =>{
-            const auth = getAuth();
-            signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
+                    history.push(redirect)
                 
-            const user = result.user;
-            console.log(user)
-        })
-    }
-    let history = useHistory(); 
-    const goBackRegistration =() =>{
-        
-        history.push("/Registraion")
+            }) 
+            
+        }
 
-    }
-        
+        // HandleEmail Function
+        const handleEmail =(e)=>{
+                setEmail(e.target.value)  
+                console.log(email)          
+        }
 
+
+        // PassWord Function
+        const handlePassword =(e)=>{
+            setPassWord(e.target.value)
+            console.log('password')
+        }
+
+        //HandleEmailPassWord Login
+        const hanleEmailLogin =(email,password) =>{
+            const auth = getAuth();
+                signInWithEmailAndPassword(auth, email, password)
+                .then((result) => {
+                const user = result.user;
+                setUser(user)
+                console.log(user)
+            })
+            // .catch((error) => {
+            //     const errorCode = error.code;
+            //     const errorMessage = error.message;
+            // });
+        }
+
+        useEffect(()=>{
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                  setUser(user)
+                  console.log(user)
+                  // ...
+                } else {
+                  setUser({})
+                }
+              });
+        },[])
+
+        //Go Back to Registration
+        const goBackRegistration =() =>{
+            history.push("/Registraion")
+        }
+        
     return (
         <div className="w-50 mx-auto border p-5">
              <h3 className="text-center text-primary"> Login/Sign In Page </h3> 
-        <Form>
+        <div>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label onBlur={handleEmail}>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Label>Email address</Form.Label>
+                <Form.Control onBlur={handleEmail} type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
                 </Form.Text>
             </Form.Group>
-
-            <Form.Group onBlur = {handlePassword}className="mb-3" controlId="formBasicPassword">
+ 
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control onBlur = {handlePassword} type="password" placeholder="Password" />
+                {password}
             </Form.Group>
             <Container>
             <Row>
                 <Col>
-                    <Button onClick={handSignIn}variant="success" type="submit">
-                        Sign Using Email
-                    </Button>
+                <button onClick={hanleEmailLogin} className="btn btn-success" type="button">LogIn </button>
                 </Col>
                 <Col>
-                <Button onClick={handleGoogleSignin}variant="success" type="submit">
-                    Sign Using Google
-                </Button>
+                <button onClick={handlegoogleSignIn} className="btn btn-success" type="button">Google </button>
+               
                 </Col>
                 <Col>
                 <Button variant="danger" type="submit">
@@ -85,7 +116,7 @@ const Login = () => {
                 <div><button onClick={goBackRegistration}type="button" className="btn btn-link">Go Back To Registration Page</button></div>
             </Row>
             </Container>
-        </Form>
+        </div>
         </div>
     );
 };

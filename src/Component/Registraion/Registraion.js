@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from "react"
 import { Form, Row, Button, Col,Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,sendEmailVerification } from "firebase/auth";
 
 
 
@@ -45,12 +45,26 @@ const Registraion = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((result) => {
             const user = result.user;
-            
-            console.log(user)
+            verifyEmail()
+            console.log('REgisterd',user)
         })
+        .catch((error) => {
+    
+            const errorMessage = error.message;
+            setError(errorMessage)
+            // ..
+          });
        
     }
 
+    const verifyEmail = () =>{
+        const auth = getAuth();
+        sendEmailVerification(auth.currentUser)
+        .then(() => {
+            // Email verification sent!
+            // ...
+         });
+    }
     let history = useHistory(); 
     const handleRegisterd=(e)=>{
         setisRegistered(e.target.checked)

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import OurTeam from './../OurTeam/OurTeam';
-import Services from './../Services/Services';
-import Registraion from './../Registraion/Registraion';
+
 
 class Footer extends Component {
     render() {
@@ -31,21 +29,21 @@ class Footer extends Component {
                             <h4> Contact</h4>
                             
                             <div className="text-info d-flex flex-column">
-                                <i class="fas fa-map-marker-alt"> </i> Address: 34, Gulshan Avenue, Dhaka-1212
-                                <i class="fas fa-envelope"></i> Email: unitedHopital@gmail.com
+                                <i className="fas fa-map-marker-alt"> </i> Address: 34, Gulshan Avenue, Dhaka-1212
+                                <i className="fas fa-envelope"></i> Email: unitedHopital@gmail.com
                             </div>
                             <div className="d-flex w-50 "> 
                                     <Col className="d-flex justify-content-center align-items-center border" sm={3}> 
-                                        <a href="https://www.facebook.com/"> <i class="fab fa-facebook"></i> </a>
+                                        <a href="https://www.facebook.com/"> <i className="fab fa-facebook"></i> </a>
                                     </Col>
                                     <Col className="d-flex justify-content-center align-items-center border" sm={3}>  
-                                        <a href="https://twitter.com/?lang=en"> <i class="fab fa-twitter"></i> </a>
+                                        <a href="https://twitter.com/?lang=en"> <i className="fab fa-twitter"></i> </a>
                                     </Col>
                                     <Col className="d-flex justify-content-center align-items-center border" sm={3}>   
-                                        <a href="https://www.linkedin.com/signup"> <i class="fab fa-linkedin"></i> </a>
+                                        <a href="https://www.linkedin.com/signup"> <i className="fab fa-linkedin"></i> </a>
                                     </Col>
                                     <Col className="d-flex justify-content-center align-items-center border" sm={3}>  
-                                        <a href="https://www.linkedin.com/signup"> <i class="fab fa-instagram"></i> </a>
+                                        <a href="https://www.linkedin.com/signup"> <i className="fab fa-instagram"></i> </a>
                                     </Col>
                             </div>
                         </Col>

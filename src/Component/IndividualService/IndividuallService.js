@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 const IndividuallService = (props) => {
     const {id,img,name,description}= props.service
 
+   
+
+
     return (
         <Card style={{ width: '18rem' }} className="mb-5">
             <Card.Img variant="top" src={img} />

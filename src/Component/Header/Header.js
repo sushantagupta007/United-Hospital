@@ -1,22 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Doctor from '../../Image/doctor.png'
-import useAuth from '../Hooks/useAuth'
+
+import useFire from './../Hooks/useFire';
 
 const Header = () => {
-    const {user,logOut } = useAuth(); 
-    const name = user.displayName
+    const {user,logOut } = useFire(); 
     const email = user.email
 
-    const userNameShow = () =>{
-        if(user.displayName){
-            return name
-        }
-    }
+    
 
     const emailShow = () =>{
 
-        if(!user.displayName){
+        if(user.email){
             return email
         }
     }
@@ -47,14 +43,17 @@ const Header = () => {
                 <li>
                     <Link className="nav-link" to="/Registraion">Registrtaion</Link>
                 </li>
-                <li className="nav-link fw-bold"> Welcome Mr.{user.displayName ? userNameShow():emailShow()} 
+                <li>
+                    <Link className="nav-link" to="/Login">Login</Link>
+                </li>
+                <li className="nav-link fw-bold"> Welcome Mr.{user.email ? emailShow():''} 
 
                 </li>
                 
                    
                 <li>  
                     {
-                    user.displayName||user.email? <button type="button" onClick={logOut} className="btn btn-link">Logout </button>: ''}
+                    user.email? <button type="button" onClick={logOut} className="btn btn-link">Logout </button>: ''}
                 </li>
 
             </ul>
