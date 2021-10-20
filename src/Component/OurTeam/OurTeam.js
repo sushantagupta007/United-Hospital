@@ -10,7 +10,7 @@ const OurTeam = () => {
             .then(res=>res.json())
             .then(data=>{
                 setTeams(data)
-                console.log(data)
+                
             })
     },[])
     

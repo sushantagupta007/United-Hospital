@@ -21,6 +21,8 @@ import Service from './Component/Service/Service';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import Footer from './Component/Footer/Footer';
 import AuthProvider from './Context/AuthProvider';
+import Research from './Component/Research/Research';
+import StorySection from './Component/StorySection/StorySection';
 
 
 function App() {
@@ -41,8 +43,14 @@ function App() {
             <Services></Services>
           </Route>
           <PrivateRoute path="/Service/:serviceId">
-            <Service></Service>
+              <Service></Service>
           </PrivateRoute>
+          <PrivateRoute path="/Research"> 
+            <Research></Research> 
+          </PrivateRoute>
+          <PrivateRoute path="/StorySection">
+            <StorySection></StorySection>
+          </PrivateRoute> 
           <Route path="/Login">
             <Login></Login>
           </Route>
@@ -53,7 +61,7 @@ function App() {
           <Route path="/Contact">
             <Contact></Contact>
           </Route>
-          <Route exact path ="/">
+          <Route exact path ="*">
             <NotFound></NotFound>
           </Route>
         </Switch>

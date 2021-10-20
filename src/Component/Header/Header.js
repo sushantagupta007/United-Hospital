@@ -6,19 +6,21 @@ import useFire from './../Hooks/useFire';
 
 const Header = () => {
     const {user,logOut } = useFire(); 
-    const email = user.email
+    
 
     
 
     const emailShow = () =>{
 
         if(user.email){
-            return email
+            return user.email
         }
     }
+
+
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg bg-light navbar-light">
             <div className="container">
             <Link className="navbar-brand" to="/Home">
                 <img src={Doctor} alt="" width="60" height="60"/>
@@ -43,10 +45,16 @@ const Header = () => {
                 <li>
                     <Link className="nav-link" to="/Registraion">Registrtaion</Link>
                 </li>
+                <li className="nav-link fw-bold">
+                    {user.email ? <Link  to="/Research">Research</Link>:''}
+                </li>
+                <li className="nav-link fw-bold">
+                    {user.email ? <Link className="" to="/StorySection">Story Section</Link>:''}
+                </li>
                 <li>
                     <Link className="nav-link" to="/Login">Login</Link>
                 </li>
-                <li className="nav-link fw-bold"> Welcome Mr.{user.email ? emailShow():''} 
+                <li className="nav-link fw-bold"> Signed in as{user.email ? emailShow():''} 
 
                 </li>
                 

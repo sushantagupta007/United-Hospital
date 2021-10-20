@@ -6,6 +6,8 @@ import { useParams } from 'react-router';
 
 
 
+
+
 const Service = (props) => {   
     let {serviceId} = useParams();
 
@@ -15,17 +17,15 @@ const Service = (props) => {
           .then(res=>res.json())
           .then(data=>{
               setServices(data)
-              console.log(data)
+              console.log(services[0])
           })
-  },[])
-  console.log(services)
+  },[services])
+  
 
     return (
         <div>
             {
-              <h1> 
-                {serviceId}
-              </h1>  
+              services.map((item)=>item.id==={serviceId}?item:'')
             }
         </div>
     );

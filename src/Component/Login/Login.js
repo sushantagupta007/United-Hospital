@@ -5,7 +5,7 @@ import useFire from './../Hooks/useFire';
 import { useState} from 'react';
 import { useHistory, useLocation } from 'react-router';
 
-import { getAuth, signInWithEmailAndPassword,onAuthStateChanged,sendSignInLinkToEmail} from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword,onAuthStateChanged,} from "firebase/auth";
 import { useEffect } from 'react';
 
 
@@ -48,10 +48,10 @@ const Login = () => {
             setPassWord(e.target.value)
             console.log('password')
         }
-
+        const auth = getAuth();
         //HandleEmailPassWord Login
         const hanleEmailLogin =(email,password) =>{
-            const auth = getAuth();
+            
                 signInWithEmailAndPassword(auth, email, password)
                 .then((result) => {
                 const user = result.user;
@@ -69,13 +69,11 @@ const Login = () => {
             onAuthStateChanged(auth, (user) => {
                 if (user) {
                   setUser(user)
-                  console.log(user)
-                  // ...
                 } else {
                   setUser({})
                 }
               });
-        },[])
+        },[auth])
 
         //Go Back to Registration
         const goBackRegistration =() =>{
