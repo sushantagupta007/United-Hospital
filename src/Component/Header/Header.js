@@ -13,7 +13,7 @@ const Header = () => {
     const emailShow = () =>{
 
         if(user.email){
-            return user.email
+            return user.displayName
         }
     }
 
@@ -54,7 +54,7 @@ const Header = () => {
                 <li>
                     <Link className="nav-link" to="/Login">Login</Link>
                 </li>
-                <li className="nav-link fw-bold"> Signed in as{user.email ? emailShow():''} 
+                <li className="nav-link fw-bold"> Signed in as {user.email ? emailShow():''} 
 
                 </li>
                 
