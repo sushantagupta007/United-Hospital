@@ -1,8 +1,10 @@
 import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Doctor from '../../Image/doctor.png'
 
 import useFire from './../Hooks/useFire';
+
 
 const Header = () => {
     const {user,logOut } = useFire(); 
@@ -10,66 +12,57 @@ const Header = () => {
 
     
 
-    const emailShow = () =>{
+    const nameShow = () =>{
 
-        if(user.email){
+        if(user.displayName){
             return user.displayName
         }
     }
 
+    const emailNameShow = () =>{
+        if(user.email){
+            const email = user.email;
+            return email.split('@')[0].toUpperCase() 
 
+        }
+    }
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg bg-light navbar-light">
-            <div className="container">
-            <Link className="navbar-brand" to="/Home">
-                <img src={Doctor} alt="" width="60" height="60"/>
-            </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-            <div className="collapse navbar-collapse " id="navbarNav">
-            <ul className="navbar-nav">
-                <li className="nav-item"> 
-                    <Link className="nav-link active" aria-current="page" to="/Home">Home</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" to="/OurTeam">Our Team</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" to="/Services">Services</Link>
-                </li>
-                <li> 
-                    <Link className="nav-link" to="/Contact">Contact</Link>
-                </li>
-                <li>
-                    <Link className="nav-link" to="/Registraion">Registrtaion</Link>
-                </li>
-                <li className="nav-link fw-bold">
-                    {user.email ? <Link  to="/Research">Research</Link>:''}
-                </li>
-                <li className="nav-link fw-bold">
-                    {user.email ? <Link className="" to="/StorySection">Story Section</Link>:''}
-                </li>
-                <li>
-                    <Link className="nav-link" to="/Login">Login</Link>
-                </li>
-                <li className="nav-link fw-bold"> Signed in as {user.email ? emailShow():''} 
-
-                </li>
-                
-                   
-                <li>  
-                    {
-                    user.email? <button type="button" onClick={logOut} className="btn btn-link">Logout </button>: ''}
-                </li>
-
-            </ul>
-        </div>
-        </div>
-        </nav>
-</div>
-    );
+        
+        
+<Navbar bg="light" expand="lg">
+  <Container>
+    <Navbar.Brand href="#home">
+      <img
+        src={Doctor}
+        width="60"
+        height="60"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+      />
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+        <Link className="me-2" to="/Home">Home</Link>
+        <Link className="me-2" to="/OurTeam">Our Team</Link>
+        <Link className="me-2" to="/Services">Services</Link>
+        <Link className="me-2" to="/Contact">Contact</Link>
+        <Link className="me-2" to="/Registraion">Registration</Link>
+        <Link className="me-2" to="/Research">Research</Link>
+        {
+           user.email ? <Link  to="/Research">Research</Link>:'' 
+        }
+        {
+           user.email ? <Link  to="/StorySection">StorySection</Link>:'' 
+        }
+        <Link to="/Login">Login</Link>
+        <li className="nav-link fw-bold"> Signed in as {user.displayName ? nameShow():emailNameShow()} </li>
+        <li> {user.email? <button type="button" onClick={logOut} className="btn btn-link">Logout </button>: ''}</li>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+    )
 };
 
 export default Header;

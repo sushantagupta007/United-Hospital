@@ -45,7 +45,7 @@ const Registraion = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((result) => {
             const user = result.user;
-            verifyEmail()
+            
             console.log('REgisterd',user)
         })
         .catch((error) => {
@@ -57,14 +57,14 @@ const Registraion = () => {
        
     }
 
-    const verifyEmail = () =>{
-        const auth = getAuth();
-        sendEmailVerification(auth.currentUser)
-        .then(() => {
-            // Email verification sent!
-            // ...
-         });
-    }
+    // const verifyEmail = () =>{
+    //     const auth = getAuth();
+    //     sendEmailVerification(auth.currentUser)
+    //     .then(() => {
+    //         // Email verification sent!
+    //         // ...
+    //      });
+    // }
     let history = useHistory(); 
     const handleRegisterd=(e)=>{
         setisRegistered(e.target.checked)

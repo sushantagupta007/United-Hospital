@@ -23,7 +23,7 @@ const Login = () => {
         const redirect = location.state?.from || '/Home'
 
         const history = useHistory(); 
-
+        const auth = getAuth();
         const handlegoogleSignIn =() =>{
             googleSignIn()
             .then((result) => {
@@ -48,27 +48,31 @@ const Login = () => {
             setPassWord(e.target.value)
             console.log('password')
         }
-        const auth = getAuth();
+        
         //HandleEmailPassWord Login
-        const hanleEmailLogin =(email,password) =>{
+        const hanleEmailLogin =(e) =>{
             
                 signInWithEmailAndPassword(auth, email, password)
                 .then((result) => {
-                const user = result.user;
+                
+                history.push(redirect)
                 setUser(user)
-                console.log(user)
             })
-            // .catch((error) => {
-            //     const errorCode = error.code;
-            //     const errorMessage = error.message;
-            // });
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
+            
+            e.preventDefault(); 
+            
         }
 
         useEffect(()=>{
-            const auth = getAuth();
+            
             onAuthStateChanged(auth, (user) => {
                 if (user) {
                   setUser(user)
+                  console.log(user)
                 } else {
                   setUser({})
                 }
