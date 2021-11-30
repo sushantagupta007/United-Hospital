@@ -1,0 +1,24 @@
+
+
+.appointCardBG {
+    position: relative;
+  }
+  
+  .appointCardBG:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image: url('../../../Image/AppointmentBG.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+  
+  .appointCardBGContent {
+    position: relative;
+  }

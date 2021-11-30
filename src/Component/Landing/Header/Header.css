@@ -1,0 +1,13 @@
+.customBackground{
+    background-color: #1F2B6C;
+    color:white;
+}
+
+.customButton{
+    background-color:rgba(144, 149, 158,1)
+}
+
+.customFont{
+    font-family:  'Work Sans';
+    font-style: normal;
+}

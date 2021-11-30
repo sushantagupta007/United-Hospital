@@ -1,0 +1,11 @@
+.specialityBox{
+    padding:3rem;
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.customBg{
+    background-color: #1F2B6C;
+}
