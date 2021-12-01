@@ -21,9 +21,9 @@ const Speciality = () => {
 
     return (
         <div className="appointmentCard">
-             <div className="d-flex align-items-center flex-column customPadding w-50 mx-auto">
-                <p style={para1}> Always Caring </p> 
-                <h3 style={h3}> Our Specialties</h3>
+             <div className="d-flex align-items-center flex-column w-50 mx-auto">
+                <p className="secondaryTextColor fontWeight700 fontFamilyWork text-uppercase fs5_5" > Always Caring </p> 
+                <h3 className="primaryTextColor fontWeight700 fs-3 fontFamilyYesava"> Our Specialties</h3>
             </div>
             <Container>
             <Row>

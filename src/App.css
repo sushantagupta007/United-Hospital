@@ -30,6 +30,45 @@
   color: #61dafb;
 }
 
+
+.fontWeight700{
+  font-weight: 700;
+}
+.fontWeight400{
+  font-weight: 400;
+}
+.fontFamilyWork{
+  font-family: 'Work Sans';
+}    
+.fontFamilyYesava{
+  font-family: 'Yesava One';
+} 
+
+.primaryTextColor{
+  color:#1F2B6C; 
+}
+
+.fs5_5{
+  font-size: 18px;
+}
+.primaryBgColor{
+  background-color: #1F2B6C; 
+}
+.secondaryTextColor{
+  color:#159EEC; 
+}
+
+.secondaryBgColor{
+  color:#159EEC; 
+}
+
+.tertiaryTextColor{
+  color:rgb(191, 210, 248); 
+}
+
+.tertiaryBgColor{
+  color:rgb(191, 210, 248) !important; 
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

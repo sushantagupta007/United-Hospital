@@ -19,7 +19,7 @@ const h3 ={
 
 const bannerContent ={
     width:"32.5rem",
-    height:"13.5rem"
+    height:'auto'
 }
 
 const firstAppoint ={
@@ -44,13 +44,13 @@ const Banner = () => {
     return (
         <div> 
             <div className="customBannerBG"> 
-                <div style={bannerContent} className="d-flex flex-column justify-content-center">
-                    <h6 style={h6}> CARING FOR LIFE</h6>
-                    <h1 style={h3}> Leading the Way <br/> in Medical Excellency</h1>
-                    <Button type="button" className=" mt-3 w-25 rounded-pill bannerButton customFont border-0"> Our Services </Button>
+                <div style={bannerContent} className="d-flex flex-column justify-content-center align-items-md-start align-items-center">
+                    <h6 className="responsiveTitle" style={h6}> CARING FOR LIFE</h6>
+                    <h1 className="responsiveDes " style={h3}> Leading the Way <br/> in Medical Excellency</h1>
+                    <Button type="button" className="rounded-pill bannerButton fontFamilyWork border-0"> Our Services </Button>
                 </div>
             </div>
-            <div className="appointmentCard d-flex justify-content-between"> 
+            <div className="d-none appointmentCard d-md-flex justify-content-between"> 
                 <AppointmentCard img = {Calender} bg={firstAppoint}></AppointmentCard> 
                 <AppointmentCard img ={Group} bg={secondAppoint}></AppointmentCard> 
                 <AppointmentCard img={Cash} bg={thirdAppoint}></AppointmentCard> 

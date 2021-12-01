@@ -1,0 +1,15 @@
+ul.ba {
+    list-style-type: none;
+}
+
+input::placeholder{
+    color:'#1F2B6C'!important; 
+}
+
+#id{
+    color:"#1F2B6Cs"
+}
+
+.background{
+    color: "#BFD2F8" !important; 
+}

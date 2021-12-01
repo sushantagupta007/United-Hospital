@@ -1,1 +1,13 @@
 
+@media only screen and (max-width: 425px) {
+    #mobileDivSize{
+        width:425px;
+        height:150px
+    }
+}
+@media only screen and (max-width: 375px) {
+    #mobileDivSize{
+        width:375px;
+        height:150px
+    }
+}
