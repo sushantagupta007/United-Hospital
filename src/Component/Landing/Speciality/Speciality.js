@@ -4,26 +4,13 @@ import './Speciality.css'
 import spciailitySection from '../../../Image/Speciality.png';
 
 const Speciality = () => {
-    const para1 = {
-        color:'#159EEC',
-        fontWeight:700,
-        textTransform: "uppercase",
-        fontFamily:'Work Sans',
-        fontSize:'18px'
-    }
-    
-    const h3 ={
-        color:"#1F2B6C",
-        fontFamily:'Yeseva One',
-        fontWeight:400,
-        fontSize:"26px"
-    }
+ 
 
     return (
         <div className="spcilityMainDivPadding">
              <div className="d-flex align-items-center flex-column w-50 mx-auto">
-                <p className="secondaryTextColor fontWeight700 fontFamilyWork text-uppercase fs5_5" > Always Caring </p> 
-                <h3 className="primaryTextColor fontWeight700 fs-3 fontFamilyYesava"> Our Specialties</h3>
+                <p className="secondaryTextColor fontWeight700 fontFamilyWork text-uppercase fs5_5 text-center" > Always Caring </p> 
+                <h3 className="primaryTextColor fontWeight700 fs-3 fontFamilyYesava text-center"> Our Specialties</h3>
             </div>
             <Container>
             <Row>

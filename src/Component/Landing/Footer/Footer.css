@@ -4,6 +4,7 @@ ul.ba {
 
 input::placeholder{
     color:'#1F2B6C'!important; 
+    font-size: 14px!important;
 }
 
 #id{
@@ -18,7 +19,9 @@ input::placeholder{
     .footerCardPadding{
         padding-left: 10rem;
         padding-right: 10rem;
-
+    }
+    .responsivePadding{
+        padding:0rem;
     }
 }
 

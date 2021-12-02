@@ -42,9 +42,9 @@ const Banner = () => {
         <div> 
             <div className="customBannerBG"> 
                 <div style={bannerContent} className="responsiveBannerPosition d-flex flex-column justify-content-center align-items-md-start align-items-center">
-                    <h6 className="responsiveTitle m-0 p-0"> CARING FOR LIFE</h6>
+                    <h6 className="responsiveTitle m-0 p-0 secondaryTextColor"> CARING FOR LIFE</h6>
                     <h1 className="responsiveDes fontFamilyYesava primaryTextColor fontWeight700 m-0 p-0"> Leading the Way <br/> in Medical Excellency</h1>
-                    <Button type="button" className=" p-0 m-0 rounded-pill bannerButton fontFamilyWork border-0"> Our Services </Button>
+                    <Button type="button" className=" rounded-pill bannerButton fontFamilyWork border-0"> Our Services </Button>
                 </div>
             </div>
             <div className="d-none appointmentDivPadding appointmentCard d-md-flex justify-content-between"> 

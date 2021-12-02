@@ -40,6 +40,9 @@
         color: #159eec;
         font-weight:700
     }
+    .customBannerBG{
+        background-size: contain;
+    }
 }
 
 .bannerButton{

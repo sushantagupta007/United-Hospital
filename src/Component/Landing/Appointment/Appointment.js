@@ -16,7 +16,7 @@ const Appointment = () => {
             <Row className="appointCardBGContent">
                 <Col md={6} lg={6} xs={12} className="responsiveStyle" >
                     <h3 className="secondaryTextColor fontFamilyYesava responsiveFont fontWeight700"> Book an Appointment</h3>
-                    <p className="fs5_"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <p className="fs5_5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Quisque placerat scelerisque tortor ornare ornare. 
                         Convallis felis vitae tortor augue. Velit nascetur 
                         proin massa in. Consequat faucibus porttitor enim et.

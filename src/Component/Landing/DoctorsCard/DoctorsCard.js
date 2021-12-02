@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import './DoctorCard.css'
 
 const DoctorsCard = (props) => {
     const para1 = {
@@ -18,7 +19,7 @@ const DoctorsCard = (props) => {
     }
     const {img} =props
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card id="responsiveCardSize">
            <Card.Img variant="top" src={img} />
            <Card.Body style={{backgroundColor:"#BFD2F8"}} className="d-flex flex-column align-items-center p-0 m-0">
                 <Card.Text style={para1}> Doctor's Name </Card.Text>

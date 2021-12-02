@@ -47,7 +47,7 @@ const Services = () => {
     <div className="my-4 serviceDivPadding">
         <div className="d-flex align-items-center flex-column w-50 mx-auto">
             <p className="text-uppercase secondaryTextColor fontWeight700 responsiveFontSize text-center"> Care you can believe in </p> 
-            <h3 className="primaryTextColor fontFamilyYesava fontWeight700 fs-2 "> Our Services</h3>
+            <h3 className="primaryTextColor fontFamilyYesava fontWeight700 fs-2 text-center"> Our Services</h3>
         </div>
         <Container>
             <Row>

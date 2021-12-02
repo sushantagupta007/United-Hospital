@@ -38,55 +38,55 @@ const Doctors = () => {
                 <Carousel className="responsivePadding">
                     <Carousel.Item id="responsiveDivSizeCarosal">
                         <Row className="d-none d-sm-flex">  
-                            <Col xs={12} lg={4} className="mb-2">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
-                            <Col xs={12} lg={4} className="mb-2">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors2}></DoctorsCard>
                             </Col>
-                            <Col xs={12} lg={4} className="mb-2">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
                         </Row>
-                        <Row className="d-md-none">  
-                            <Col xs={12} lg={4} className="mb-2">
+                        <Row className="d-sm-none">  
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
                         </Row>
                     </Carousel.Item>
                     <Carousel.Item id="responsiveDivSizeCarosal">
-                        <Row  className="d-none d-sm-flex"> 
-                            <Col xs={12} lg={4} className="mb-2 p-0">
+                        <Row className="d-none d-sm-flex">  
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
-                            <Col xs={12} lg={4} className="mb-2 p-0">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors2}></DoctorsCard>
                             </Col>
-                            <Col xs={12} lg={4} className="mb-2 p-0">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
-                            
                         </Row>
-                        <Row className="d-md-none"> 
-                            <Col xs={12} lg={4} className="mb-2 p-0">
-                                <DoctorsCard img={Doctors2}></DoctorsCard>
+                        <Row className="d-sm-none">  
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
+                                <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
                         </Row>
                     </Carousel.Item>
+                  
                     <Carousel.Item id="responsiveDivSizeCarosal">
                         <Row className="d-none d-sm-flex"> 
-                            <Col xs={12} lg={4} className="mb-2">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
-                            <Col xs={12} lg={4} className="mb-2">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors2}></DoctorsCard>
                             </Col>
-                            <Col xs={12} lg={4} className="mb-2">
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
                         </Row>
-                        <Row className="d-md-none"> 
-                            <Col xs={12} lg={4} className="mb-2">
+                        <Row className="d-sm-none"> 
+                            <Col xs={12} lg={4} sm={4} className="mb-2">
                                 <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
                         </Row>

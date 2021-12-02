@@ -1,0 +1,11 @@
+@media only screen and (min-width: 426px) and (max-width:768) {
+    #responsiveCardSize{
+        width:16rem; 
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #responsiveCardSize{
+        width:18rem; 
+    }
+}
