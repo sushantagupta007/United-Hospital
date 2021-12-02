@@ -21,15 +21,15 @@ const Footer = () => {
     
   
     return (
-        <div className="appointmentCard customBg pt-5">
+        <div className="footerCardPadding primaryBgColor pt-5">
             <Row>
-                <Col>
-                    <h3 style={h3}> MEDICAL </h3>
+                <Col lg={3} className="px-5 m-0">
+                    <h3 className="fontWeight700 fontFamilyYesava fs-2 tertiaryTextColor"> MEDICAL </h3>
                     <p style={text}> Leading the Way in Medical
                         Execellence, Trusted Care.
                     </p>
                 </Col>
-                <Col>
+                <Col lg={3} className="px-5">
                     <h3 style={text}> Important Links</h3>
                     <ul  style={{listStyleType:'none',color:"white"}} > 
                         <li style={{listStyleType:"none"}}> Appointment </li>
@@ -38,7 +38,7 @@ const Footer = () => {
                         <li> Abouts Us </li>
                     </ul>
                 </Col>
-                <Col>
+                <Col lg={3} className="px-5">
                 <h3 style={text}> Contact Us</h3>
                     <div className="text-white"> 
                         <p> Call: (237) 681-812-255 </p>
@@ -47,15 +47,15 @@ const Footer = () => {
                         <p> Some country </p>
                     </div>
                 </Col>
-                <Col>
+                <Col lg={3} className="px-5">
                     <h3 style={text}> Newsletter</h3>
-                    <input  style={{backgroundColor:"#BFD2F8", color:"#1F2B6C"}} className="p-3 w-100 text-black bg-none border-0" type="text" placeholder="Enter Your Email Address" />
+                    <input  style={{backgroundColor:"#BFD2F8", color:"#1F2B6C"}} className="p-3 responsiveWidth text-black bg-none border-0" type="text" placeholder="Enter Your Email Address" />
                     <Button id="id"style={{marginLeft:"-45px"}}> <i  className="fs-6 fas fa-location-arrow"></i> </Button>
                 </Col>
             </Row>
             <hr/>
-            <Row>
-                <div className="d-flex justify-content-between"> 
+            <div>
+                <div className="d-flex justify-content-between flex-column flex-md-row px-5"> 
                     <p className="text-white"> © 2021 Hospital’s name All Rights Reserved by PNTEC-LTD </p> 
                     <div id="fontAwesomeDiv"> 
                         <div className="d-flex" >
@@ -67,7 +67,7 @@ const Footer = () => {
                         </div> 
                     </div>
                 </div>
-            </Row>
+            </div>
         </div>
     );
 };

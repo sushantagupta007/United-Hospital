@@ -5,9 +5,9 @@
     background-repeat: no-repeat;
     background-size: cover
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (min-width:320px)and (max-width: 425px) {
     .customBannerBG {
-        background-size: contain;
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,15 +15,32 @@
         text-align: center;
     }
     .responsiveDes{
-        font-size: 24px;
+        font-size: 1rem;
     }
     .responsiveTitle{
-        font-size: 14px;
+        font-size: 0.75rem;
+        color: #159eec;
+        font-weight:700
     }
     .bannerButton{
-        margin-top: 0rem;
+        width:50%; 
     }
-  }
+    .responsiveBannerPosition{
+        position: relative;
+        left:-4rem;
+    }
+
+}
+@media only screen and (min-width:426px)and (max-width: 768px) {
+    .bannerButton{
+        width:50%; 
+    }
+    .responsiveTitle{
+        font-size: 1.125rem;
+        color: #159eec;
+        font-weight:700
+    }
+}
 
 .bannerButton{
     font-family: "Work Sans";
@@ -31,10 +48,10 @@
     color:"#1F2B6C";
     background-color:"#BFD2F8";
     margin-top:1.5rem; 
-    width: 25%;
 }
 
-.appointmentCard{
+.bannerMainDivPadding{
     padding-left: 10rem;
     padding-right: 10rem;
 }
+

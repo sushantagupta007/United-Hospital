@@ -44,33 +44,52 @@ const h3 ={
 }
 const Services = () => {
     return (
-    <div className="my-4 appointmentCard">
+    <div className="my-4 serviceDivPadding">
         <div className="d-flex align-items-center flex-column w-50 mx-auto">
-            <p className="text-uppercase secondaryTextColor fontWeight700 fs5_5"> Care you can believe in </p> 
-            <h3 className="primaryTextColor fontFamilyYesava fontWeight700 fs5_5"> Our Services</h3>
+            <p className="text-uppercase secondaryTextColor fontWeight700 responsiveFontSize text-center"> Care you can believe in </p> 
+            <h3 className="primaryTextColor fontFamilyYesava fontWeight700 fs-2 "> Our Services</h3>
         </div>
         <Container>
             <Row>
-                <Col  lg={2} className="border">
-                    <Row >
-                        <Col className="d-flex flex-column justify-content-center align-items-center py-2">
+                <Col xs={12} lg={2} className="border">
+                    <Row className="d-md-none"> 
+                        <Col xs={6} className="d-flex flex-column justify-content-center align-items-center py-3">
+                            <img src={Checkup} alt="Checkup" />
+                            <p className="fontFamilyWork fs-6 fontWeight400"> Free Checkup</p>
+                        </Col>
+                        <Col xs={6} className="d-flex flex-column justify-content-center align-items-center py-3 primaryBgColor">
+                            <img src={Cardio} alt="Checkup" />
+                            <p className="fontFamilyWork fs-6 fontWeight400 text-white"> Cardiogram</p>
+                        </Col>
+                        <Col  xs={6} className="d-flex flex-column justify-content-center align-items-center py-3">
+                            <img src={DNA} alt="Checkup" />
+                            <p> DNA Testing</p>
+                        </Col>
+                        <Col xs={6} className="d-flex flex-column justify-content-center align-items-center py-3">
+                            <img src={DNA} alt="Checkup" />
+                            <p> DNA Testing</p>
+                        </Col>
+                    </Row>
+
+                    <Row className="d-none d-md-block">
+                        <Col className=" d-flex flex-column justify-content-center align-items-center py-2">
                             <img src={Checkup} alt="Checkup" />
                             <p className="fontFamilyWork fs-6 fontWeight400"> Free Checkup</p>
                         </Col>
                     </Row>
-                    <Row style={para2Bg} >
+                    <Row style={para2Bg} className="d-none d-md-block" >
                         <Col className="d-flex flex-column justify-content-center align-items-center py-2">
                             <img src={Cardio} alt="Checkup" />
-                            <p className="fontFamilyWork fs-6 fontWeight400 secondaryTextColor1"> Cardiogram</p>
+                            <p className="fontFamilyWork fs-6 fontWeight400 "> Cardiogram</p>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="d-none d-md-block">
                         <Col className="d-flex flex-column justify-content-center align-items-center py-2">
                             <img src={DNA} alt="Checkup" />
                             <p> DNA Testing</p>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="d-none d-md-block">
                     <Col className="d-flex flex-column justify-content-center align-items-center py-2">
                             <img src={BloodBank} alt="Checkup" />
                             <p> Blood Bank</p>
@@ -80,7 +99,7 @@ const Services = () => {
                         <Button className="primaryBgColor" type="button"> View All</Button>
                     </Row>
                 </Col>
-                <Col  lg={7} xs={6}>
+                <Col className="d-none d-md-block" lg={7}>
                     <h3 style={title}> A passion for putting patients first. </h3>
                     <Row>
                         <Col lg={6} className="p-0 m-0">
@@ -111,7 +130,7 @@ const Services = () => {
                       nascetur proin massa in.
                     </Row>
                 </Col>
-                <Col  lg={3}>
+                <Col  lg={3} className="d-none d-md-block">
                     <Row className="mb-3">
                         <img src={ServiceImage1} alt="Service Image"/>
                     </Row>

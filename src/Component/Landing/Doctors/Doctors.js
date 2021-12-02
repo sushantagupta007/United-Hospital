@@ -28,55 +28,71 @@ const Doctors = () => {
     
 
     return (
-        <div className="appointmentCard mb-2"> 
+        <div className="doctorsDivPadding mb-2"> 
             <div className="d-flex align-items-center flex-column w-50 mx-auto mt-3">
-                <p style={para1}> Trusted Care </p> 
-                <h3 className="mb-5"style={h3}> Our Doctors</h3>
+                <p className="secondaryTextColor fontWeight700 text-uppercase fontFamilyWork fs5_5"> Trusted Care </p> 
+                <h3 className="mb-5 primaryTextColor fw-bold fontFamilyYesava fs-3" > Our Doctors</h3>
             </div> 
             <div>
-            <Row className="mb-3">
-                <Carousel>
-                    <Carousel.Item>
-                        <Row> 
-                            <Col lg={4} className="mb-2">
+            <div className="mb-3">
+                <Carousel className="responsivePadding">
+                    <Carousel.Item id="responsiveDivSizeCarosal">
+                        <Row className="d-none d-sm-flex">  
+                            <Col xs={12} lg={4} className="mb-2">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
-                            <Col lg={4} className="mb-2">
+                            <Col xs={12} lg={4} className="mb-2">
                                 <DoctorsCard img={Doctors2}></DoctorsCard>
                             </Col>
-                            <Col lg={4} className="mb-2">
+                            <Col xs={12} lg={4} className="mb-2">
                                 <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
                         </Row>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Row> 
-                            <Col lg={4} className="mb-2">
+                        <Row className="d-md-none">  
+                            <Col xs={12} lg={4} className="mb-2">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
-                            </Col>
-                            <Col lg={4} className="mb-2">
-                                <DoctorsCard img={Doctors2}></DoctorsCard>
-                            </Col>
-                            <Col lg={4} className="mb-2">
-                                <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
                         </Row>
                     </Carousel.Item>
-                    <Carousel.Item>
-                        <Row> 
-                            <Col lg={4} className="mb-2">
+                    <Carousel.Item id="responsiveDivSizeCarosal">
+                        <Row  className="d-none d-sm-flex"> 
+                            <Col xs={12} lg={4} className="mb-2 p-0">
                                 <DoctorsCard img={Doctor1}></DoctorsCard>
                             </Col>
-                            <Col lg={4} className="mb-2">
+                            <Col xs={12} lg={4} className="mb-2 p-0">
                                 <DoctorsCard img={Doctors2}></DoctorsCard>
                             </Col>
-                            <Col lg={4} className="mb-2">
+                            <Col xs={12} lg={4} className="mb-2 p-0">
+                                <DoctorsCard img={Doctors3}></DoctorsCard>
+                            </Col>
+                            
+                        </Row>
+                        <Row className="d-md-none"> 
+                            <Col xs={12} lg={4} className="mb-2 p-0">
+                                <DoctorsCard img={Doctors2}></DoctorsCard>
+                            </Col>
+                        </Row>
+                    </Carousel.Item>
+                    <Carousel.Item id="responsiveDivSizeCarosal">
+                        <Row className="d-none d-sm-flex"> 
+                            <Col xs={12} lg={4} className="mb-2">
+                                <DoctorsCard img={Doctor1}></DoctorsCard>
+                            </Col>
+                            <Col xs={12} lg={4} className="mb-2">
+                                <DoctorsCard img={Doctors2}></DoctorsCard>
+                            </Col>
+                            <Col xs={12} lg={4} className="mb-2">
+                                <DoctorsCard img={Doctors3}></DoctorsCard>
+                            </Col>
+                        </Row>
+                        <Row className="d-md-none"> 
+                            <Col xs={12} lg={4} className="mb-2">
                                 <DoctorsCard img={Doctors3}></DoctorsCard>
                             </Col>
                         </Row>
                     </Carousel.Item>
                 </Carousel>
-            </Row>
+            </div>
             </div>  
         </div>
           

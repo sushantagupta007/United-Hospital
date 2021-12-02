@@ -1,13 +1,40 @@
+@media only screen and (min-width: 768px){
+    #responsiveDivSize{
+        width:100%; 
+        height:auto; 
+    }
+    .responsiveFontSize{
+        font-size: 18px;
+    }
+}
 
 @media only screen and (max-width: 425px) {
-    #mobileDivSize{
+    #responsiveDivSize{
         width:425px;
-        height:150px
+        height:auto;
     }
+    .responsiveFontSize{
+        font-size: 16px;
+    }
+    .careDivPadding{
+        margin: 1rem 0rem;
+      }
 }
 @media only screen and (max-width: 375px) {
-    #mobileDivSize{
+    #responsiveDivSize{
         width:375px;
-        height:150px
+        height:auto;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    #responsiveDivSize{
+        width:320px;
+        height:auto;
+    }
+}
+
+/* .responsiveFont{
+        font-size: 1rem;
+    }
+} */

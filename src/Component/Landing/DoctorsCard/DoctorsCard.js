@@ -25,13 +25,13 @@ const DoctorsCard = (props) => {
                 <Card.Title style={h3}>NEUROLOGY</Card.Title>
                 <div>
                     <Row className="mb-1">
-                        <Col lg={4}>
+                        <Col>
                             <i style={{fontSize:"1rem"}} className="p-2 border rounded-pill customBg text-white fab fa-facebook"></i>
                         </Col>
-                        <Col lg={4}>
+                        <Col>
                             <i style={{fontSize:"1rem"}} className="p-2 border rounded-pill customBg text-white fab fa-linkedin-in"></i>
                         </Col>
-                        <Col lg={4}>
+                        <Col>
                             <i style={{fontSize:"1rem"}} className="p-2 border rounded-pill customBg text-white fab fa-instagram"></i>
                         </Col>                                                                                                                                               
                     </Row>                                                                                                                                                

@@ -9,3 +9,18 @@
 #idTouch{
     color:#159EEC
 }
+
+
+@media only screen and (max-width: 425px) {
+  .contactCardPadding{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}  
+
+@media only screen and (min-width: 768px) {
+    .contactCardPadding{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+  } 

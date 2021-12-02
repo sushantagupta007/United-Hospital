@@ -6,10 +6,7 @@ import Calender from '../../../Image/Calender.png';
 import Group from '../../../Image/Group.png';
 import Cash from '../../../Image/Cash.png';
 
-const h6 ={
-    color:"rgba(21, 158, 236, 1)",
-    fontWeight:700
-}
+
 
 const h3 ={
     color: "rgba(31, 43, 108, 1)",
@@ -44,13 +41,13 @@ const Banner = () => {
     return (
         <div> 
             <div className="customBannerBG"> 
-                <div style={bannerContent} className="d-flex flex-column justify-content-center align-items-md-start align-items-center">
-                    <h6 className="responsiveTitle" style={h6}> CARING FOR LIFE</h6>
-                    <h1 className="responsiveDes " style={h3}> Leading the Way <br/> in Medical Excellency</h1>
-                    <Button type="button" className="rounded-pill bannerButton fontFamilyWork border-0"> Our Services </Button>
+                <div style={bannerContent} className="responsiveBannerPosition d-flex flex-column justify-content-center align-items-md-start align-items-center">
+                    <h6 className="responsiveTitle m-0 p-0"> CARING FOR LIFE</h6>
+                    <h1 className="responsiveDes fontFamilyYesava primaryTextColor fontWeight700 m-0 p-0"> Leading the Way <br/> in Medical Excellency</h1>
+                    <Button type="button" className=" p-0 m-0 rounded-pill bannerButton fontFamilyWork border-0"> Our Services </Button>
                 </div>
             </div>
-            <div className="d-none appointmentCard d-md-flex justify-content-between"> 
+            <div className="d-none appointmentDivPadding appointmentCard d-md-flex justify-content-between"> 
                 <AppointmentCard img = {Calender} bg={firstAppoint}></AppointmentCard> 
                 <AppointmentCard img ={Group} bg={secondAppoint}></AppointmentCard> 
                 <AppointmentCard img={Cash} bg={thirdAppoint}></AppointmentCard> 
