@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "DR. Rebecca",
+      "Designation": "Consultant",
+      "Degree": "MBBS, MRCP (UK)",
+      "img": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Biography": "Obtained M.B.B.S from MAG Osmani Medical College, Sylhet; under Chittagong University in 1978. Completed internship in Sir Salimullah Medical College. Worked for seven years under Ministry of Health, Bangladesh."
+    },
+    {
+      "id": 2,
+      "name": "DR. Angelia",
+      "Designation": "Junior Consultant",
+      "Degree": "MBBS, MS (Cardiothoracic Surgery)",
+      "img": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Biography": "Obtained MBBS degree from Sher-E-Bangla Medical College, Barishal under University of Dhaka in 2004"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Diana",
+      "Designation": "Senior Consultant",
+      "Degree": "MBBS, DEM (Diploma in Endocrinology & Metabolism), MD (Endocrinology & Metabolism)",
+      "img": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Biography": "Obtained MBBS from Dhaka Medical College in 1984"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Jack Foster",
+      "Designation": "Senior Consultant",
+      "Degree": "MBBS, DDV (DU)",
+      "img": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Biography": "Obtained MBBS from Dhaka University in 1982"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Kalis Mickel",
+      "Designation": "Junior Consultant",
+      "Degree": "MBBS, FCPS (Hematology)",
+      "img": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Biography": "Obtained M.B.B.S from MAG Osmani Medical College, Sylhet; under Chittagong University in 1978. Completed internship in Sir Salimullah Medical College. Worked for seven years under Ministry of Health, Bangladesh."
+    },
+    {
+      "id": 6,
+      "name": "Dr. Mickel Kolins",
+      "Designation": "Senior Consultant",
+      "Degree": "MBBS (DMC), MSc (Canada), FCPS (Surgery), FRCS (Glasgow, UK)",
+      "img": "https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+      "Biography": "Obtained M.B.B.S from MAG Osmani Medical College, Sylhet; under Chittagong University in 1978. Completed internship in Sir Salimullah Medical College. Worked for seven years under Ministry of Health, Bangladesh."
+    }
+  ]
