@@ -1,0 +1,34 @@
+ul {
+    list-style: none;
+  }
+
+ul li::before {
+    content: "\2022";
+    color: #159EEC;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width:2rem;
+ 
+    margin-left:-1rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .serviceDivPadding{
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+
+  }
+
+  @media only screen and (max-width: 425px) {
+    .serviceDivPadding{
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+    .fs5_5{
+      font-size: 16px;    
+    }
+    .serviceDivPadding{
+      margin: 1rem 0rem;
+    }
+  }

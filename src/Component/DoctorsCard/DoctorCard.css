@@ -1,0 +1,34 @@
+@media only screen and (min-width: 426px) and (max-width:768) {
+    #responsiveCardSize{
+        width:18rem; 
+    }
+    .responsiveFontSize{
+        font-size: 12px;
+    }
+    .responsiveFontSizeTitle{
+        font-size:10px;
+    }
+    .responsiveFontAwecomePadding{
+        padding:10px; 
+    }
+    .responsiveFontIconSize{
+        font-size:1rem; 
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .responsiveFontAwecomePadding{
+        padding:10px; 
+    }
+}
+@media only screen and (max-width: 320px) {
+    #responsiveCardSize{
+        width:16rem; 
+    }
+}
+
+@media only screen and (min-width:321px) and (max-width: 425px) {
+    #responsiveCardSize{
+        width:25rem; 
+    }
+}

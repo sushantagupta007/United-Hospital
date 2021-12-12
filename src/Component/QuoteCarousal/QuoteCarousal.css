@@ -1,0 +1,60 @@
+#quoteDiv {
+    position: relative;
+    }
+
+    #quoteDiv:after{
+        position: absolute;
+        background-color: #1F2B6C;
+        content: ' ';
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        z-index: -1;
+        
+    }
+  #quoteDiv:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('../../Image/QuoteCare.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    z-index: -2;
+   
+  }
+
+  .carousel-indicators button{
+    width:15px !important;
+    height:15px !important;
+    border-radius: 50% !important; 
+    color:black !important; 
+    background-color: #1F2B6C !important; 
+}
+  
+
+  @media only screen and (min-width: 426px) {
+    .responsivePadding{
+        padding:5rem 20rem; 
+    }
+    .responsiveQuotDivWidth{
+        width:25%;
+      }
+  }
+
+  @media only screen and (max-width: 425px) {
+      .responsiveQuotDivWidth{
+        width:100%;
+      }
+      .responsivePadding{
+          padding:1rem; 
+      }
+  }

@@ -1,34 +1,49 @@
 import './App.css';
-import Appointment from './Component/Landing/Appointment/Appointment';
-import Banner from './Component/Landing/Banner/Banner';
-import Care from './Component/Landing/Care/Care';
-import Contact from './Component/Landing/Contact/Contact';
-import Doctors from './Component/Landing/Doctors/Doctors';
-import Footer from './Component/Landing/Footer/Footer';
 
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
 
-import Header from './Component/Landing/Header/Header';
-import News from './Component/Landing/News/News';
-import Services from './Component/Landing/Services/Services';
-import Speciality from './Component/Landing/Speciality/Speciality';
+import {
+
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import ServiceProvide from './Pages/ServiceProvide/ServiceProvide';
+
+import DoctorsPage from './Pages/DoctorsPage/DoctorsPage';
+import Contact from './Component/Contact/Contact';
+import ContactPage from './Pages/ContactPage/ContactPage';
+
 
 
 
 function App() {
 
   return (
-    <div>
-      <Header></Header>
-      <Banner></Banner>
-      <Care></Care>
-      <Services></Services>
-      <Speciality></Speciality>
-      <Appointment></Appointment>
-      <Doctors></Doctors>
-      <News></News>
-      <Contact></Contact>
-      <Footer></Footer>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/about">
+          <About></About>
+        </Route>
+        <Route path="/service">
+          <ServiceProvide></ServiceProvide>
+        </Route>
+        <Route path="/doctor">
+          <DoctorsPage></DoctorsPage>
+        </Route>
+        <Route path="/contact">
+          <ContactPage></ContactPage>
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+      </Switch>
+    </Router>
      
       );
 }
