@@ -13,8 +13,9 @@ import {
 import ServiceProvide from './Pages/ServiceProvide/ServiceProvide';
 
 import DoctorsPage from './Pages/DoctorsPage/DoctorsPage';
-import Contact from './Component/Contact/Contact';
+
 import ContactPage from './Pages/ContactPage/ContactPage';
+import AppointmentPage from './Pages/AppointmentPage/AppointmentPage';
 
 
 
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <ContactPage></ContactPage>
+        </Route>
+        <Route path="/appointment">
+          <AppointmentPage></AppointmentPage>
         </Route>
         <Route exact path="/">
           <Home></Home>

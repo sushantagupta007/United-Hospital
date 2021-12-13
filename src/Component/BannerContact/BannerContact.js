@@ -1,5 +1,5 @@
 import React from 'react';
-import './BannerDoctor.css'; 
+import './BannerContact.css'; 
 
 
 import BlackDoctor from '../../Image/Doctor.png';
@@ -20,15 +20,15 @@ const bannerContent ={
 
 
 
-const BannerDoctor = () => {
+const BannerContact = () => {
     return (
         <div className="bannerWrapper "> 
             <div className="bannerContent p-5" id="responsiveDivSize"> 
             <Container className="p-5">
                 <Breadcrumb>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/doctor">
-                    Doctors
+                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/contact">
+                    Contact
                     </Breadcrumb.Item>
                 </Breadcrumb>
                 <h3 className='fw-bold primaryTextColor fontFamilyYesava'> Our Doctors</h3>
@@ -41,4 +41,4 @@ const BannerDoctor = () => {
         
 };
 
-export default BannerDoctor;
+export default BannerContact;
