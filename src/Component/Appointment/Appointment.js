@@ -16,7 +16,7 @@ const Appointment = () => {
             <Row className="appointCardBGContent">
                 <Col md={6} lg={6} xs={12} className="responsiveStyle" >
                     <h3 className="secondaryTextColor fontFamilyYesava responsiveFont fontWeight700"> Book an Appointment</h3>
-                    <p className="fs5_5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    <p className="fs5_5 fontFamilyWork"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Quisque placerat scelerisque tortor ornare ornare. 
                         Convallis felis vitae tortor augue. Velit nascetur 
                         proin massa in. Consequat faucibus porttitor enim et.
@@ -27,13 +27,13 @@ const Appointment = () => {
                         <Row>
                             <Col lg={6} xs={12} className="p-0 border-end "> 
                                 <input 
-                                    className=" text-white responsiveWidth responsiveBorder primaryBgColor border-bottom border-0 p-2"
+                                    className=" text-white fontFamilyWork responsiveWidth responsiveBorder primaryBgColor border-bottom border-0 p-2"
                                     type="text" 
                                     placeholder="Name" {...register("Name", { required: true, maxLength: 20 })} 
                                 />
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
-                                <select {...register("gender")} placeholder="Gender" className="text-white p-2 border-bottom border-0 responsiveWidth primaryBgColor">
+                                <select {...register("gender")} placeholder="Gender" className=" fontFamilyWork text-white p-2 border-bottom border-0 responsiveWidth primaryBgColor">
                                 <option value="" disabled selected>Gender</option>
                                     <option className="text-black" value="female">female</option>
                                     <option className="text-black" value="male">male</option>
@@ -43,21 +43,21 @@ const Appointment = () => {
                        
                             <Col lg={6} xs={12} className="p-0 border end"> 
                                 <input 
-                                    className="responsiveWidth primaryBgColor border-bottom border-0 p-2"
+                                    className=" fontFamilyWork responsiveWidth primaryBgColor border-bottom border-0 p-2"
                                     type="year" 
                                     placeholder="Email" {...register("Email", { required: true, maxLength: 20 })} 
                                 />
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                                 <input 
-                                    className=" text-white responsiveWidth border-bottom border-0 primaryBgColor p-2"
+                                    className=" fontFamilyWork text-white responsiveWidth border-bottom border-0 primaryBgColor p-2"
                                     type="text" 
                                     placeholder="Phone" {...register("Phone", { required: true, maxLength: 20 })} 
                                 />
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                                 <input 
-                                    className="responsiveWidth primaryBgColor border-bottom border-0 p-2"
+                                    className=" fontFamilyWork responsiveWidth primaryBgColor border-bottom border-0 p-2"
                                     type="date" 
                                     placeholder="Date" {...register("Date", { required: true, maxLength: 20 })} 
                                 />
@@ -72,25 +72,25 @@ const Appointment = () => {
                        
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                             <select {...register("Doctor")} placeholder="Doctor" className=" text-white p-2 border-bottom border-0 responsiveWidth primaryBgColor">
-                                <option value="" disabled selected>Doctor</option>
-                                <option className="text-black" value="female">Female</option>
-                                <option className="text-black" value="male">Male</option>
-                                <option className="text-black" value="other">Other</option>
+                                <option className="text-black fontFamilyWork"value="" disabled selected>Doctor</option>
+                                <option className="text-black fontFamilyWork" value="female">Female</option>
+                                <option className="text-black fontFamilyWork" value="male">Male</option>
+                                <option className="text-black fontFamilyWork" value="other">Other</option>
                             </select>
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                             <select {...register("Department")} placeholder="Department" className=" text-white p-2 border-bottom border-0  responsiveWidth primaryBgColor">
-                                <option value="" disabled selected>Department</option>
-                                <option className="text-black" value="female">Female</option>
-                                <option className="text-black" value="male">Male</option>
-                                <option className="text-black" value="other">Other</option>
+                                <option className="text-black fontFamilyWork" value="" disabled selected>Department</option>
+                                <option className="text-black fontFamilyWork" value="female">Female</option>
+                                <option className="text-black fontFamilyWork" value="male">Male</option>
+                                <option className="text-black fontFamilyWork" value="other">Other</option>
                             </select>
                             </Col>
                             <Col lg={12} xs={12} className="p-0 border-end ">
                                 <textarea 
                                     rows="5"
                                     placeholder="Message " 
-                                    className=" p-2 responsiveWidth primaryBgColor border-bottom border-0 text-white"
+                                    className="fontFamilyWork p-2 responsiveWidth primaryBgColor border-bottom border-0 text-white"
                                     style={{resize:'none'}}   
                                 >        
                                 </textarea>
