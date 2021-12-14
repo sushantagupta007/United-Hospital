@@ -20,9 +20,7 @@ input::placeholder{
         padding-left: 10rem;
         padding-right: 10rem;
     }
-    .responsivePadding{
-        padding:0rem;
-    }
+   
 }
 
 @media only screen and (max-width: 425px) {
