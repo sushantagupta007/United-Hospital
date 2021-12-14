@@ -16,6 +16,8 @@ import DoctorsPage from './Pages/DoctorsPage/DoctorsPage';
 
 import ContactPage from './Pages/ContactPage/ContactPage';
 import AppointmentPage from './Pages/AppointmentPage/AppointmentPage';
+import Blog from './Pages/Blog/Blog';
+import SingleNews from './Pages/SingleNews/SingleNews';
 
 
 
@@ -42,6 +44,12 @@ function App() {
         </Route>
         <Route path="/appointment">
           <AppointmentPage></AppointmentPage>
+        </Route>
+        <Route path="/blog">
+          <Blog></Blog>
+        </Route>
+        <Route path="/singlenews">
+          <SingleNews></SingleNews>
         </Route>
         <Route exact path="/">
           <Home></Home>

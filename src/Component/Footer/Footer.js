@@ -50,13 +50,14 @@ const Footer = () => {
                 <Col lg={3} sm={6} className="responsivePadding">
                     <h3 style={text}> Newsletter</h3>
                     <input  style={{backgroundColor:"#BFD2F8", color:"#1F2B6C"}} className="p-3 responsiveWidth text-black bg-none border-0" type="text" placeholder="Enter Your Email Address" />
-                    <Button id="id"style={{marginLeft:"-35px",width:"35px"}}> <i  className="fs-6 fas fa-location-arrow"></i> </Button>
+                    <Button id="id"style={{marginLeft:"-45px",width:"35px"}}> <i  className="fs-6 fas fa-location-arrow"></i> </Button>
                 </Col>
             </Row>
             <hr/>
             <div>
                 <div className="d-flex justify-content-between flex-column flex-sm-column flex-md-row px-5"> 
-                    <p className="text-white"> © 2021 Hospital’s name All Rights Reserved by PNTEC-LTD </p> 
+                    
+                    <p className="text-white m-0"> © 2021 Hospital’s name All Rights Reserved by PNTEC-LTD </p> 
                     <div id="fontAwesomeDiv"> 
                         <div className="d-flex" >
                             <Row> 

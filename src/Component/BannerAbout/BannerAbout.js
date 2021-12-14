@@ -1,10 +1,13 @@
 import React from 'react';
-import './BannerContact.css'; 
+
 
 
 import BlackDoctor from '../../Image/Doctor.png';
 import { Breadcrumb, Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faEye, faHeart, faUserAlt } from '@fortawesome/free-solid-svg-icons';
 
+import './BannerAbout.css'
 
 const h3 ={
     color: "rgba(31, 43, 108, 1)",
@@ -20,18 +23,23 @@ const bannerContent ={
 
 
 
-const BannerContact = () => {
+const BannerAbout = () => {
     return (
-        <div className="bannerWrapperContact "> 
-            <div className="bannerContentContact p-5" id="responsiveDivSize"> 
+        <div className="bannerWrapperAbout "> 
+            <div className="bannerContentAbout p-5" id="responsiveDivSize"> 
             <Container className="p-5">
                 <Breadcrumb>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/contact">
-                    Contact
+                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/about">
+                    About Us
                     </Breadcrumb.Item>
+                   
+
                 </Breadcrumb>
-                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> Our Contact</h3>
+                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> 
+               About Us
+                </h3>
+                         
             </Container>
            
             </div>
@@ -41,4 +49,4 @@ const BannerContact = () => {
         
 };
 
-export default BannerContact;
+export default BannerAbout;

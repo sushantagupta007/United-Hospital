@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar,Button, Badge } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import './Header.css'
 const Header = () => {
     return (
@@ -12,12 +13,12 @@ const Header = () => {
             className="me-auto my-md-0"
             style={{ maxHeight: 'auto' }}
             navbarScroll >
-            <Nav.Link className="text-white customFont" href="#action1">Home</Nav.Link>
-            <Nav.Link className="text-white customFont" href="#action2">About us</Nav.Link>
-            <Nav.Link className="text-white customFont" href="#action2">Services</Nav.Link>
-            <Nav.Link className="text-white customFont" href="#action2">Doctors</Nav.Link>
-            <Nav.Link className="text-white customFont" href="#action2">News</Nav.Link>
-            <Nav.Link className="text-white customFont" href="#action2">Contact</Nav.Link>
+            <NavLink className="text-white customFont me-3" to="/home">Home</NavLink>
+            <NavLink className="text-white customFont me-3" to="/about">About us</NavLink>
+            <NavLink className="text-white customFont me-3" to="/service">Services</NavLink>
+            <NavLink className="text-white customFont me-3" to="/doctor">Doctors</NavLink>
+            <NavLink className="text-white customFont me-3" to="/blog">News</NavLink>
+            <NavLink className="text-white customFont me-3" to="/contact">Contact</NavLink>
           
           </Nav>
           <Form className="d-flex">

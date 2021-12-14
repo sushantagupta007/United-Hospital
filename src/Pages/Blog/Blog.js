@@ -1,26 +1,22 @@
 import React, { Fragment } from 'react';
-
-import BannerDoctor from '../../Component/BannerDoctor/BannerDoctor';
 import Contact from '../../Component/Contact/Contact';
-import ContactForm from '../../Component/ContactForm/ContactForm';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
-import Map from '../../Component/Map/Map';
+import Post from '../../Component/Post/Post';
 import TopHeader from '../../Component/TopHeader/TopHeader';
-import AppointmentForm from './../../Component/AppointmentForm/AppointmentForm';
+import BannerBlog from './../../Component/BannerBlog/BannerBlog';
 
-const AppointmentPage = () => {
+const Blog = () => {
     return (
         <Fragment>
             <TopHeader></TopHeader>
             <Header></Header>
-            <BannerDoctor></BannerDoctor>
-            <AppointmentForm></AppointmentForm>
-            <Map></Map>
+            <BannerBlog></BannerBlog>
+            <Post></Post>
             <Contact></Contact>
             <Footer></Footer>
         </Fragment>
     );
 };
 
-export default AppointmentPage;
+export default Blog;

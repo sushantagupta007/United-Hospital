@@ -1,5 +1,5 @@
 .customBannerBG{
-    background: url('../../Image/BannerContact.png');
+    background: url('../../Image/Banner.png');
     height:100%;
     padding:10rem;
     background-repeat: no-repeat;
@@ -58,11 +58,11 @@
     padding-right: 10rem;
 }
 
-.bannerWrapperContact {
+.bannerWrapperService {
     position: relative;
   }
   
-  .bannerWrapperContact:before {
+  .bannerWrapperService:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -77,7 +77,7 @@
     background-size: cover;
   }
   
-  .bannerContentContact {
+  .bannerContentService {
     position: relative;
 
   }

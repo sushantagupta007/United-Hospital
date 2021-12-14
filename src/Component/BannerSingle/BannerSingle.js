@@ -1,9 +1,11 @@
 import React from 'react';
-import './BannerContact.css'; 
+
 
 
 import BlackDoctor from '../../Image/Doctor.png';
 import { Breadcrumb, Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faEye, faHeart, faUserAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 const h3 ={
@@ -20,18 +22,23 @@ const bannerContent ={
 
 
 
-const BannerContact = () => {
+const BannerSingle = () => {
     return (
-        <div className="bannerWrapperContact "> 
-            <div className="bannerContentContact p-5" id="responsiveDivSize"> 
+        <div className="bannerWrapper "> 
+            <div className="bannerContent p-5" id="responsiveDivSize"> 
             <Container className="p-5">
                 <Breadcrumb>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/contact">
-                    Contact
+                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/doctor">
+                        About
                     </Breadcrumb.Item>
+                   
+
                 </Breadcrumb>
-                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> Our Contact</h3>
+                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> 
+                About Us
+                </h3>
+                         
             </Container>
            
             </div>
@@ -41,4 +48,4 @@ const BannerContact = () => {
         
 };
 
-export default BannerContact;
+export default BannerSingle;

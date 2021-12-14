@@ -9,9 +9,11 @@ import Speciality from './../../Component/Speciality/Speciality';
 import Care from '../../Component/Care/Care';
 import Services from '../../Component/Services/Services';
 import Appointment from '../../Component/Appointment/Appointment'
+import TopHeader from '../../Component/TopHeader/TopHeader';
 const Home = () => {
     return (
         <Fragment>
+            <TopHeader></TopHeader>
             <Header></Header>
             <Banner></Banner>
             <Care></Care>

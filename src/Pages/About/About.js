@@ -7,6 +7,8 @@ import Doctors from '../../Component/Doctors/Doctors';
 import News from './../../Component/News/News';
 import Contact from './../../Component/Contact/Contact';
 import Footer from './../../Component/Footer/Footer';
+import TopHeader from '../../Component/TopHeader/TopHeader';
+import BannerAbout from '../../Component/BannerAbout/BannerAbout';
 
 
 
@@ -14,8 +16,9 @@ const About = () => {
 
     return (
         <Fragment>
+            <TopHeader></TopHeader>
             <Header></Header>
-            <Banner></Banner>
+            <BannerAbout></BannerAbout>
             <ServiceCare> </ServiceCare>
             <QuoteCarousal></QuoteCarousal>
             <Doctors></Doctors>

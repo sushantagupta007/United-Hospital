@@ -8,11 +8,13 @@ import News from '../../Component/News/News';
 import QuoteCarousal from '../../Component/QuoteCarousal/QuoteCarousal';
 import Doctors from './../../Component/Doctors/Doctors';
 import BannerDoctor from './../../Component/BannerDoctor/BannerDoctor';
+import TopHeader from '../../Component/TopHeader/TopHeader';
 
 
 const DoctorsPage = () => {
     return (
         <Fragment>
+            <TopHeader></TopHeader>
             <Header></Header>
             <BannerDoctor></BannerDoctor>
             <Doctors></Doctors>

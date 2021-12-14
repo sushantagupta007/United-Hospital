@@ -25,10 +25,22 @@
     #responsiveCardSize{
         width:16rem; 
     }
+    .responsiveFontSize{
+        font-size:16px;
+    }
+    .responsiveFontAwecomePadding{
+        padding:5px
+    }
 }
 
 @media only screen and (min-width:321px) and (max-width: 425px) {
     #responsiveCardSize{
         width:25rem; 
+    }
+    .responsiveFontSize{
+        font-size:16px;
+    }
+    .responsiveFontAwecomePadding{
+        padding:5px
     }
 }
