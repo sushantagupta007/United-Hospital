@@ -4,6 +4,7 @@ import SmallPhone from '../../Image/SmallPhone.png';
 import Clock from '../../Image/Clock.png'; 
 import Location from '../../Image/Location.png'; 
 
+import './TopHeader.css'
 const TopHeader = () => {
     return (
         <Container>
@@ -13,7 +14,7 @@ const TopHeader = () => {
                         <span className='secondaryTextColor'>ICAL</span> 
                     </h3>
                 </Col>
-                <Col lg={8} className='d-flex justify-content-around'>
+                <Col id="responsiveTopHeader" lg={8} className=' d-none d-sm-flex justify-content-around'>
                     <div className='d-flex'>
                         <div>
                             <img  className="w-100"src={SmallPhone} alt="Phone" />

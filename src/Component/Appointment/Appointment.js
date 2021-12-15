@@ -12,7 +12,7 @@ const Appointment = () => {
     };
    
     return (
-        <div className="appointmentDivPadding appointCardBG">
+        <Container className="appointCardBG">
             <Row className="appointCardBGContent">
                 <Col md={6} lg={6} xs={12} className="responsiveStyle" >
                     <h3 className="secondaryTextColor fontFamilyYesava responsiveFont fontWeight700"> Book an Appointment</h3>
@@ -103,7 +103,7 @@ const Appointment = () => {
                 </form>
                 </Col>
             </Row>
-        </div>
+        </Container>
     );
 };
 

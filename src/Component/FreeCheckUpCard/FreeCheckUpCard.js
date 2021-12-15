@@ -5,13 +5,13 @@ import './FreeCheckUpCard.css'
 
 import VectorImage from '../../Image/Vector.png'; 
 const FreeCheckUpCard = (props) => {
-    const {title,list} = props
+    const {title,list,img} = props
     
     
     return (
-        <Card id="customCard" style={{ width: '18rem' }}>
+        <Card id="customCard" style={{ width: '18rem' }} className="m-0  p-2 w-100">
             <div className="containerId"> 
-                <Card.Img className="image" variant="top" src={CheckUpCard} /> 
+                <Card.Img className="image" variant="top" src={img} /> 
                 <div className="middle">
                     <div className="text">
                         <img src={VectorImage} />

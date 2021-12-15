@@ -46,7 +46,10 @@
       .breadcrumbContainerPaddingResponsive{
           padding:0px;
       }
-
+      #responsiveBreadCrumbTitle{
+        position: relative;
+        top:-20px;
+    }
 }
 @media only screen and (min-width:426px)and (max-width: 768px) {
     .bannerButton{
@@ -107,3 +110,4 @@
         padding:5rem; 
     }
   }
+

@@ -29,15 +29,15 @@ const BannerService = () => {
             <div className="bannerContentService bannerContentServicePaddingResponsive " id="responsiveDivSize"> 
             <Container className=" breadcrumbContainerPaddingResponsive">
                 <Breadcrumb>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item style={{color:'1F2B6C'}} className="fw-bold" href="/home">Home</Breadcrumb.Item>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/service">
                     Service
                     </Breadcrumb.Item>
                    
 
                 </Breadcrumb>
-                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> 
-               Services
+                <h3 id="responsiveBreadCrumbTitle" className='fw-bold primaryTextColor fontFamilyYesava p-0 m-0'> 
+                Services
                 </h3>
                          
             </Container>
