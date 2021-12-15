@@ -23,8 +23,8 @@ const bannerContent ={
 const BannerContact = () => {
     return (
         <div className="bannerWrapperContact "> 
-            <div className="bannerContentContact p-5" id="responsiveDivSize"> 
-            <Container className="p-5">
+            <div className="bannerContentContact breadcrumbContainerPaddingResponsive" id="responsiveDivSize"> 
+            <Container className="breadcrumbContainerPaddingResponsive">
                 <Breadcrumb>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/contact">

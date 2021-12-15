@@ -50,7 +50,7 @@ const Footer = () => {
                 <Col lg={3} sm={6} md={3}>
                     <h3 style={text}> Newsletter</h3>
                     <input  style={{backgroundColor:"#BFD2F8", color:"#1F2B6C"}} className="p-3 responsiveWidth text-black bg-none border-0" type="text" placeholder="Enter Your Email Address" />
-                    <Button id="id"style={{marginLeft:"-45px",width:"35px"}}> <i  className="fs-6 fas fa-location-arrow"></i> </Button>
+                    <Button id="id"style={{marginLeft:"-50px",width:"35px"}}> <i  className="fs-6 fas fa-location-arrow"></i> </Button>
                 </Col>
             </Row>
             <hr/>

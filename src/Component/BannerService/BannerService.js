@@ -26,8 +26,8 @@ const bannerContent ={
 const BannerService = () => {
     return (
         <div className="bannerWrapperService "> 
-            <div className="bannerContentService p-5" id="responsiveDivSize"> 
-            <Container className="p-5">
+            <div className="bannerContentService bannerContentServicePaddingResponsive " id="responsiveDivSize"> 
+            <Container className=" breadcrumbContainerPaddingResponsive">
                 <Breadcrumb>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/service">

@@ -71,7 +71,7 @@ const Appointment = () => {
                             </Col>
                        
                             <Col lg={6} xs={12} className="p-0 border-end"> 
-                            <select {...register("Doctor")} placeholder="Doctor" className=" text-white p-2 border-bottom border-0 responsiveWidth primaryBgColor">
+                            <select {...register("Doctor")} placeholder="Doctor" className="fontFamilyWork text-white p-2 border-bottom border-0 responsiveWidth primaryBgColor">
                                 <option className="text-black fontFamilyWork"value="" disabled selected>Doctor</option>
                                 <option className="text-black fontFamilyWork" value="female">Female</option>
                                 <option className="text-black fontFamilyWork" value="male">Male</option>
@@ -79,7 +79,7 @@ const Appointment = () => {
                             </select>
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
-                            <select {...register("Department")} placeholder="Department" className=" text-white p-2 border-bottom border-0  responsiveWidth primaryBgColor">
+                            <select {...register("Department")} placeholder="Department" className="fontFamilyWork text-white p-2 border-bottom border-0  responsiveWidth primaryBgColor">
                                 <option className="text-black fontFamilyWork" value="" disabled selected>Department</option>
                                 <option className="text-black fontFamilyWork" value="female">Female</option>
                                 <option className="text-black fontFamilyWork" value="male">Male</option>

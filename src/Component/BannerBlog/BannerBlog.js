@@ -20,9 +20,9 @@ const bannerContent ={
 
 const BannerBlog = () => {
     return (
-        <div className="bannerWrapper "> 
-            <div className="bannerContent p-5" id="responsiveDivSize"> 
-            <Container className="p-5">
+        <div className="bannerWrapperBlog "> 
+            <div className="bannerContentBlog breadcrumbContainerPaddingResponsive" id="responsiveDivSize"> 
+            <Container className="breadcrumbContainerPaddingResponsive">
                 <Breadcrumb>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
                     <Breadcrumb.Item className="primaryTextColor fw-bold" href="/blog">

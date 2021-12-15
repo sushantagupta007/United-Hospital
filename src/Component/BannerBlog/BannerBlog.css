@@ -1,5 +1,5 @@
 .customBannerBG{
-    background: url('../../Image/BannerContact.png');
+    background: url('../../Image/Banner.png');
     height:100%;
     padding:10rem;
     background-repeat: no-repeat;
@@ -29,6 +29,23 @@
         position: relative;
         left:-4rem;
     }
+    .bannerWrapperService:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background-image: url('../../Image/BannerDoctor.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 100%;
+      }
+      .breadcrumbContainerPaddingResponsive{
+          padding:0px;
+      }
 
 }
 @media only screen and (min-width:426px)and (max-width: 768px) {
@@ -58,11 +75,11 @@
     padding-right: 10rem;
 }
 
-.bannerWrapper {
+.bannerWrapperBlog {
     position: relative;
   }
   
-  .bannerWrapper:before {
+  .bannerWrapperBlog:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -71,13 +88,22 @@
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    background-image: url('../../Image/BannerBlog.png');
+    background-image: url('../../Image/BannerDoctor.png');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
   }
   
-  .bannerContent {
+  .bannerContentBlog {
     position: relative;
 
+  }
+
+  @media only screen and (min-width: 426px) {
+    .breadcrumbContainerPaddingResponsive{
+        padding:5rem; 
+    }
+    .breadcrumbContainerPaddingResponsive{
+        padding:5rem; 
+    }
   }

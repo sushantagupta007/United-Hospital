@@ -9,6 +9,7 @@ import ServiceImage1 from '../../Image/ServiceImage.png'
 import ServiceImage2 from '../../Image/ServiceImage2.png'
 
 import './Services.css'
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 const para1 = {
     color:'#159EEC',
@@ -43,6 +44,11 @@ const h3 ={
     fontSize:"26px"
 }
 const Services = () => {
+    const location = useLocation(); 
+    const history = useHistory(); 
+    const handleClick =() =>{
+        history.replace('/service')
+    }
     return (
     <div className="my-4 serviceDivPadding">
         <div className="d-flex align-items-center flex-column w-50 mx-auto">
@@ -96,7 +102,7 @@ const Services = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Button className="primaryBgColor" type="button"> View All</Button>
+                        <Button onClick={handleClick} className="primaryBgColor" type="button"> View All</Button>
                     </Row>
                 </Col>
                 <Col className="d-none d-md-block" lg={7}>
