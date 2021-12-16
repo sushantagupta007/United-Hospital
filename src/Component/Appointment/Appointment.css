@@ -102,3 +102,21 @@
 input[type=date]:invalid::-webkit-datetime-edit {
   color: #999;
 }
+
+.inputPadding {
+  padding:12.5px;
+}
+.colPadding{
+  padding:11.25px; 
+}
+
+.buttonMargin{
+  margin-top:-11px; 
+}
+
+
+input[type=submit]:hover{
+  background-color: rgba(21, 158, 236,0.5);
+  text-decoration: underline;
+  color:rgb(26, 8, 85);
+}
