@@ -1,5 +1,5 @@
-ul.ba {
-    list-style-type: none;
+ul li {
+   list-style: none; 
 }
 
 input::placeholder{

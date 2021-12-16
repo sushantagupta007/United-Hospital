@@ -2,6 +2,7 @@ import React from 'react';
 import { Row,Col,Button } from 'react-bootstrap';
 
 import './Footer.css'
+import { NavLink } from 'react-router-dom';
 const Footer = () => {
 
     const h3 = {
@@ -22,29 +23,29 @@ const Footer = () => {
   
     return (
         <div className="footerCardPadding primaryBgColor pt-5">
-            <Row>
+            <Row className="g-2">
                 <Col lg={3} sm={6} md={3} className=" m-0">
                     <h3 className="fontWeight700 fontFamilyYesava fs-2 tertiaryTextColor"> MEDICAL </h3>
-                    <p style={text}> Leading the Way in Medical
+                    <p className="fontFamilyWork text-light"> Leading the Way in Medical
                         Execellence, Trusted Care.
                     </p>
                 </Col>
                 <Col lg={3} sm={6} md={3} className="">
                     <h3 style={text}> Important Links</h3>
-                    <ul  style={{color:"white"}} > 
-                        <li style={{listStyleType:"none"}}> Appointment </li>
-                        <li> Doctors </li>
-                        <li> Services </li>
-                        <li> Abouts Us </li>
-                    </ul>
+                    <div className='d-flex flex-column'> 
+                        <NavLink className="text-white" to="/appointment"> Appointment </NavLink>
+                        <NavLink className="text-white" to="/doctor"> Doctor </NavLink>
+                        <NavLink className="text-white" to="/service"> Services </NavLink>
+                        <NavLink className="text-white" to="/appointment"> Appointment </NavLink>
+                    </div>
                 </Col>
                 <Col lg={3} sm={6} md={3}>
                 <h3 style={text}> Contact Us</h3>
                     <div className="text-white"> 
-                        <p> Call: (237) 681-812-255 </p>
-                        <p> Email: fildineesoe@gmail.com </p>
-                        <p> Address: 0123 Some place </p>
-                        <p> Some country </p>
+                        <p className='m-0'> Call: (237) 681-812-255 </p>
+                        <p className='m-0'> Email: fildineesoe@gmail.com </p>
+                        <p className='m-0'> Address: 0123 Some place </p>
+                        <p className='m-0'> Some country </p>
                     </div>
                 </Col>
                 <Col lg={3} sm={6} md={3}>

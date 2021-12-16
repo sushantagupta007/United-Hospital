@@ -22,75 +22,84 @@ const AppointmentForm = () => {
                             tortor augue. Velit nascetur proin massa in. Consequat faucibus 
                             porttitor enim et.    
                         </p>
+                        <form onSubmit={handleSubmit(onSubmit)} >
+                        <Row>
+                            <Col lg={6} className='p-0 border-end'>
+                                <input 
+                                    className="colPadding border-0 text-white fontFamilyWork responsiveWidth responsiveBorder primaryBgColor"
+                                    type="text" 
+                                    placeholder="Name" {...register("Name", { required: true, maxLength: 20 })} 
+                                />  
+                            </Col>
+                            <Col lg={6} className='p-0'>
+                                <select {...register("Department")} className="fontFamilyWork text-white inputPadding responsiveWidth primaryBgColor">
+                                    <option className="text-black fontFamilyWork" value="" disabled selected>Department</option>
+                                    <option className="text-black fontFamilyWork" value="female">Female</option>
+                                    <option className="text-black fontFamilyWork" value="male">Male</option>
+                                    <option className="text-black fontFamilyWork" value="other">Other</option>
+                                </select>
+                            </Col>
+                            <Col lg={6} className="p-0 border-end border-bottom">
+                                <input 
+                                    className="colPadding border-0 fontFamilyWork responsiveWidth primaryBgColor"
+                                    type="year" 
+                                    placeholder="Email" {...register("Email", { required: true, maxLength: 20 })} 
+                                />
+                            </Col>
+                            <Col lg={6} xs={12} className="p-0 border-end"> 
+                                <input 
+                                    className="border-0 border-bottom colPadding fontFamilyWork text-white responsiveWidth  primaryBgColor"
+                                    type="text" 
+                                    placeholder="Phone" {...register("Phone", { required: true, maxLength: 20 })} 
+                                />
+                            </Col>
+                            <Col lg={6 } className="p-0 border-end">
+                                <input 
+                                    className="border-0 border-bottom colPaddingborder-0 colPadding fontFamilyWork responsiveWidth primaryBgColor "
+                                    type="date" 
+                                    placeholder="Date" {...register("Date", { required: true, maxLength: 20 })} 
+                                />
+                            </Col>
+                            <Col lg={6} className="p-0 border-end">
+                                <input 
+                                    className="border-0 border-bottom colPadding responsiveWidth primaryBgColor"
+                                    type="time" 
+                                    placeholder="Time" {...register("Time", { required: true, maxLength: 20 })} 
+                                />
+                            </Col>
+                                                  
+                            <Col lg={6} xs={12} className="p-0 border-end"> 
+                                <select {...register("Doctor")} placeholder="Doctor" className="border-0 border-bottom colPadding fontFamilyWork text-white responsiveWidth primaryBgColor">
+                                    <option className="text-black fontFamilyWork"value="" disabled selected>Doctor</option>
+                                    <option className="text-black fontFamilyWork" value="female">Female</option>
+                                    <option className="text-black fontFamilyWork" value="male">Male</option>
+                                    <option className="text-black fontFamilyWork" value="other">Other</option>
+                                </select>
+                            </Col>
+                            <Col lg={6} xs={12} className="p-0 border-end"> 
+                                <select {...register("Department")} placeholder="Department" className="border-0 border-bottom colPadding fontFamilyWork text-white responsiveWidth primaryBgColor">
+                                    <option className="text-black fontFamilyWork" value="" disabled selected>Department</option>
+                                    <option className="text-black fontFamilyWork" value="female">Female</option>
+                                    <option className="text-black fontFamilyWork" value="male">Male</option>
+                                    <option className="text-black fontFamilyWork" value="other">Other</option>
+                                </select>
+                            </Col>
+                            <Col lg={12} xs={12} className="p-0 border-end ">
+                                <textarea 
+                                    rows="5"
+                                    placeholder="Message " 
+                                    className="fontFamilyWork p-2 responsiveWidth primaryBgColor border-bottom border-0 text-white"
+                                    style={{resize:'none'}}   
+                                >        
+                                </textarea>
+                            </Col>
                         
-                        <form onSubmit={handleSubmit(onSubmit)} className="">
-                            <Row>
-                                <Col xs={6} lg={6} className="pe-0">
-                                    <input className="w-100 text-white rounded primaryBgColor p-2" placeholder='Name' {...register("Name", { required: true, maxLength: 20 })} />
-                                </Col>
-                                <Col xs={6} lg={6} className="ps-0 ">
-                                    <select className="w-100 text-white p-2 primaryBgColor rounded" {...register("gender")}>
-                                        <option value="Gender" disabled="true">Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="other">Female</option>
-                                    </select>
-                                </Col>
-                                <Col xs={6} lg={6} className="pe-0">
-                                    <input type="email" className="w-100 text-white rounded primaryBgColor p-2" placeholder='Email' {...register("email", { required: true})} />
-                                </Col>
-                                <Col xs={6} lg={6} className="ps-0 ">
-                                    <input type="text" className="w-100 text-white primaryBgColor  p-2" placeholder='Phone' {...register("phone", {required:true } )}/>
-                                </Col>
-                                <Col xs={6} lg={6} className="pe-0">
-                                    <input type="date" className="w-100 text-white rounded primaryBgColor p-2" placeholder='Date' {...register("date", { required: true})} />
-                                </Col>
-                                <Col xs={6} lg={6} className="ps-0 ">
-                                    <input type="time" className="w-100 text-white primaryBgColor  p-2" placeholder='Time' {...register("time", {required:true } )}/>
-                                </Col>
-                                <Col xs={6} lg={6} className="pe-0">
-                                    <select className="w-100 text-white p-2 primaryBgColor rounded" {...register("doctor")}>
-                                        
-                                        <option value="neurology" disabled>Doctor</option>
-                                        <option value="neurology">Neorology</option>
-                                        <option value="oncology">Oncology</option>
-                                        <option value="bones">Bones</option>
-                                        <option value="Otorhinolaryngology">Otorhinolaryngology</option>
-                                        <option value="Ophthalmology">Ophthalmology</option>
-                                        <option value="Pulmonology">Pulmonology</option>
-                                        <option value="Renal Medicine">Renal Medicine</option>
-                                        <option value="Gastroenterology">Gastroenterology</option>
-                                        <option value="Urology">Urology</option>
-                                        <option value="Dermatology">Dermatology</option>
-                                        <option value="Gynaecology">Gynaecology</option>
-                                        <option value="Pulmonology">Pulmonology</option>
-                                    </select>
-                                </Col>
-                                <Col xs={6} lg={6} className="ps-0 ">
-                                    <select className="w-100 text-white p-2 primaryBgColor rounded" {...register("department")}>
-                                        
-                                        <option value="neurology" disabled>Department</option>
-                                        <option value="neurology">Neorology</option>
-                                        <option value="oncology">Oncology</option>
-                                        <option value="bones">Bones</option>
-                                        <option value="Otorhinolaryngology">Otorhinolaryngology</option>
-                                        <option value="Ophthalmology">Ophthalmology</option>
-                                        <option value="Pulmonology">Pulmonology</option>
-                                        <option value="Renal Medicine">Renal Medicine</option>
-                                        <option value="Gastroenterology">Gastroenterology</option>
-                                        <option value="Urology">Urology</option>
-                                        <option value="Dermatology">Dermatology</option>
-                                        <option value="Gynaecology">Gynaecology</option>
-                                        <option value="Pulmonology">Pulmonology</option>
-                                    </select>
-                                </Col>
-                                <Col lg={12} className="">
-                                    <textarea rows="5"className="w-100 text-white primaryBgColor p-2" placeholder='Message' {...register("message", {required:true } )}/>    
-                                </Col>
-                                <Col lg={12}>
-                                <input type="submit" className="w-100"/>    
-                                </Col>
-                            </Row>
-                        </form>
+                           <Col  lg={12} xs={12} className="p-0 m-0"> 
+                                <input id="buttonHover"  type="submit" className="tertiaryBgColor text-primary fw-bold border-0 responsiveWidth py-2 buttonMargin"/> 
+                           </Col> 
+                        </Row>
+                </form>
+                       
                     </Col>
                     <Col xs={12} lg={6} className="py-5 px-4 ">
                         <Container className="primaryBgColor rounded p-3 ">
