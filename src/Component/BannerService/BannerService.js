@@ -38,10 +38,8 @@ const BannerService = () => {
                 </Breadcrumb>
                 <h3 id="responsiveBreadCrumbTitle" className='fw-bold primaryTextColor fontFamilyYesava p-0 m-0'> 
                 Services
-                </h3>
-                         
+                </h3>    
             </Container>
-           
             </div>
         </div>
       

@@ -23,19 +23,20 @@ const bannerContent ={
 const BannerDoctor = () => {
     return (
         <div className="bannerWrapperDoctor "> 
-            <div className="bannerContentDoctor breadcrumbContainerPaddingResponsive" id="responsiveDivSize"> 
-            <Container className="breadcrumbContainerPaddingResponsive">
-                <Breadcrumb>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/doctor">
-                    Doctors
-                    </Breadcrumb.Item>
-                </Breadcrumb>
-                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> Our Doctors</h3>
-            </Container>
-           
-            </div>
+        <div className="bannerContentDoctor bannerContentServicePaddingResponsive " id="responsiveDivSize"> 
+        <Container className=" breadcrumbContainerPaddingResponsive">
+            <Breadcrumb>
+                <Breadcrumb.Item style={{color:'1F2B6C'}} className="fw-bold" href="/home">Home</Breadcrumb.Item>
+                <Breadcrumb.Item className="primaryTextColor fw-bold" href="/doctor">
+                Doctor
+                </Breadcrumb.Item>
+            </Breadcrumb>
+            <h3 id="responsiveBreadCrumbTitle" className='fw-bold primaryTextColor fontFamilyYesava p-0 m-0'> 
+            Our Doctors
+            </h3>    
+        </Container>
         </div>
+    </div>
       
     )
         

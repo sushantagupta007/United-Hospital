@@ -26,24 +26,20 @@ const bannerContent ={
 const BannerAbout = () => {
     return (
         <div className="bannerWrapperAbout "> 
-            <div className="bannerContentAbout p-5" id="responsiveDivSize"> 
-            <Container className="p-5">
-                <Breadcrumb>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/home">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item className="primaryTextColor fw-bold" href="/about">
-                    About Us
-                    </Breadcrumb.Item>
-                   
-
-                </Breadcrumb>
-                <h3 className='fw-bold primaryTextColor fontFamilyYesava'> 
-               About Us
-                </h3>
-                         
-            </Container>
-           
-            </div>
+        <div className="bannerContentAbout bannerContentServicePaddingResponsive " id="responsiveDivSize"> 
+        <Container className=" breadcrumbContainerPaddingResponsive">
+            <Breadcrumb>
+                <Breadcrumb.Item style={{color:'1F2B6C'}} className="fw-bold" href="/home">Home</Breadcrumb.Item>
+                <Breadcrumb.Item className="primaryTextColor fw-bold" href="/about">
+                    About
+                </Breadcrumb.Item>
+            </Breadcrumb>
+            <h3 id="responsiveBreadCrumbTitle" className='fw-bold primaryTextColor fontFamilyYesava p-0 m-0'> 
+            About Us
+            </h3>    
+        </Container>
         </div>
+    </div>
       
     )
         

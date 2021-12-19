@@ -56,15 +56,15 @@ const Footer = () => {
             </Row>
             <hr/>
             <div>
-                <div className="d-flex justify-content-between flex-column flex-sm-column flex-md-row"> 
+                <div className="d-flex justify-content-between align-items-center flex-column flex-sm-column flex-md-row"> 
                     
-                    <p className="text-white m-0"> © 2021 Hospital’s name All Rights Reserved by PNTEC-LTD </p> 
+                    <p className="text-white m-0 text-center"> © 2021 Hospital’s name All Rights Reserved by PNTEC-LTD </p> 
                     <div id="fontAwesomeDiv"> 
                         <div className="d-flex" >
                             <Row> 
-                                <Col> <i style={{backgroundColor:"#BFD2F8"}} className="border rounded-pill fab fa-linkedin-in p-2"> </i> </Col>
-                                <Col> <i style={{backgroundColor:"#BFD2F8"}} className="rounded-pill p-2 border fab fa-facebook"> </i> </Col>
-                                <Col> <i style={{backgroundColor:"#BFD2F8"}} className=" rounded-pill p-2 border fab fa-instagram"> </i> </Col>
+                                <Col> <a href="https://www.linkedin.com/notifications/" > <i style={{backgroundColor:"#BFD2F8"}} className="border rounded-pill fab fa-linkedin-in p-2"> </i> </a> </Col>
+                                <Col> <a href="https://web.facebook.com/?_rdc=1&_rdr">  <i style={{backgroundColor:"#BFD2F8"}} className="rounded-pill p-2 border fab fa-facebook"> </i> </a> </Col>
+                                <Col> <a href="https://www.instagram.com/">  <i style={{backgroundColor:"#BFD2F8"}} className=" rounded-pill p-2 border fab fa-instagram"> </i> </a></Col>
                             </Row>
                         </div> 
                     </div>

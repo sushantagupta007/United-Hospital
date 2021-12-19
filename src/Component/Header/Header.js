@@ -1,8 +1,14 @@
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar,Button, Badge } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+
 import './Header.css'
 const Header = () => {
+  const history = useHistory(); 
+  const handleClick =() =>{
+    history.push('/appointment')
+  }
     return (
       <Navbar className="customBackground" expand="md">
       <Container >
@@ -23,7 +29,7 @@ const Header = () => {
           </Nav>
           <Form className="d-flex">
             <Button type="button" className="bg-transparent border-0"> <i className ="fas fa-search"></i> </Button> 
-            <Button type="button" className="rounded-pill customButton customFont border-0"> Appointment </Button>
+            <Button onClick={handleClick}type="button" className="rounded-pill customButton customFont border-0"> Appointment </Button>
           </Form>
         </Navbar.Collapse>
       </Container>
