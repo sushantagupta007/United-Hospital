@@ -7,3 +7,8 @@
     width:80%;
     height: 300px; 
   }
+
+  .leaflet-icon{
+    color:blue !important;
+
+  }

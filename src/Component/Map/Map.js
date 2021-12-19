@@ -9,11 +9,14 @@ import L from 'leaflet';
 import icon from '../../Image/icon1.svg'
 
 
+
 const myIcon = new L.Icon({
     iconUrl: icon,
     iconRetinaUrl: icon,
-    popupAnchor:  [-0, -0],
-    iconSize: [32,45],     
+    iconSize: [25, 41],
+    iconAnchor: [10, 20],
+    popupAnchor: [2, -10]   
+    
 });
 
 const Map = () => {
@@ -33,7 +36,7 @@ const Map = () => {
   const position = [  23.80470908921082, 90.41577285451402]
     return (
       <div className='w-75 mx-auto p-2' id="mapContainer"> 
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer center={position} zoom={5.5} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -45,8 +48,32 @@ const Map = () => {
             item.geometry.coordinates[0]]
           }
           icon={myIcon}
+          eventHandlers={{
+            click: () => {
+              setActivePark(item)
+              console.log('marker clicked')
+            },
+          }}
           >
+         {activePark && (
+            <Popup
+              position={[
+                activePark.geometry.coordinates[1],
+                activePark.geometry.coordinates[0]
+              ]}
+              onClose={() => {
+                setActivePark(null);
+              }}
+            >
+              <div>
+                <p>{activePark.properties.NAME}</p>
+                <p>{activePark.properties.BRANCH}</p>
+              </div>
+            </Popup>
+          )}
+            
           </Marker>
+          
       )}        
       </MapContainer>
       </div>

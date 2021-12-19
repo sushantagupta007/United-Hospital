@@ -4,8 +4,9 @@
       "type": "Feature",
       "properties": {
         "PARK_ID": 960,
-        "NAME": "Bearbrook Skateboard Park",
-        "DESCRIPTIO": "Flat asphalt surface, 5 components"
+        "NAME": "United Hospital",
+        "BRANCH": "BARIDHARA,DHAKA",
+        "DESCRIPTIO": ""
       },
       "geometry": {
         "type": "Point",
@@ -16,12 +17,65 @@
       "type": "Feature",
       "properties": {
         "PARK_ID": 1219,
-        "NAME": "Bob MacQuarrie Skateboard Park (SK8 Extreme Park)",
-        "DESCRIPTIO": "Flat asphalt surface, 10 components, City run learn to skateboard programs, City run skateboard camps in summer"
+        "NAME": "United Hospital",
+        "BRANCH": "Sylhet Branch",
+        "DESCRIPTIO": ""
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [90.40945894102224, 23.819249279585666]
+        "coordinates": [91.84419, 24.90944]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 1219,
+        "NAME": "United Hospital",
+        "BRANCH": "Chattagrom Branch",
+        "DESCRIPTIO": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [91.83126, 22.35940]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 1219,
+        "NAME": "United Hospital",
+        "BRANCH": "Rajshahi Branch",
+        "DESCRIPTIO": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [88.58715, 24.37347]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 1219,
+        "NAME": "United Hospital",
+        "BRANCH": "Barishal Branch",
+        "DESCRIPTIO": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [90.36134, 22.68632]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "PARK_ID": 1219,
+        "NAME": "United Hospital",
+        "BRANCH": "Rangpur Branch",
+        "DESCRIPTIO": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [89.23387, 25.76664]
       }
     }
   ]
