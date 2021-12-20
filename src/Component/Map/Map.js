@@ -8,8 +8,6 @@ import L from 'leaflet';
 
 import icon from '../../Image/icon1.svg'
 
-
-
 const myIcon = new L.Icon({
     iconUrl: icon,
     iconRetinaUrl: icon,
@@ -73,11 +71,9 @@ const Map = () => {
           )}
             
           </Marker>
-          
       )}        
       </MapContainer>
       </div>
-     
     )
 };
 

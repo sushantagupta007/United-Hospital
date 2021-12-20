@@ -18,6 +18,7 @@ import ContactPage from './Pages/ContactPage/ContactPage';
 import AppointmentPage from './Pages/AppointmentPage/AppointmentPage';
 import Blog from './Pages/Blog/Blog';
 import SingleNews from './Pages/SingleNews/SingleNews';
+import AuthProvider from './AuthProvider/AuthProvider';
 
 
 
@@ -25,6 +26,7 @@ import SingleNews from './Pages/SingleNews/SingleNews';
 function App() {
 
   return (
+  <AuthProvider>
     <Router>
       <Switch>
         <Route path="/home">
@@ -56,6 +58,8 @@ function App() {
         </Route>
       </Switch>
     </Router>
+  </AuthProvider>
+    
      
       );
 }
