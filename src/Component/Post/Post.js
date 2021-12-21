@@ -1,9 +1,8 @@
-import { faArrowRight, faCalendarAlt, faEye, faHeart, faSearch, faUserAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React, { useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import ServiceCare from '../../Image/BlogPost.png'; 
+import BlogPost from '../../Image/BlogPost.png'; 
 import BlogPost1 from '../../Image/BlogPost1.png'; 
 import BlogPost2 from '../../Image/BlogPost2.png'; 
 import BlogPost3 from '../../Image/BlogPost3.png'; 
@@ -15,89 +14,69 @@ import R5 from '../../Image/R5.png';
 import R6 from '../../Image/R6.png'; 
 
 import './Post.css'
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import SingleNewsItem from '../SingleNewsItem/SingleNewsItem';
+
+
+
+
 const Post = () => {
 
-    
+    const history = useHistory(); 
+    const location = useLocation(); 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         reset();
         console.log(data)
     };
-
+const newsArry = [
+    {
+        id:1, 
+        img:BlogPost,
+        title: "News Title 1",
+        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+    },
+    {
+        id:2, 
+        img:BlogPost1,
+        title: "News Title 2",
+        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+    },
+    {
+        id:3,
+        img:BlogPost2,
+        title: "News Title 3",
+        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+    },
+    {
+        id:4,
+        img:BlogPost3,
+        title: "News Title 4",
+        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+    },
+   
+]
   
+    
+       
+   
+  
+   
     return (
         <Container>
             <Row>
                 <Col lg={8} className="p-5">
-                    {/* First Post */}
-                    <div className='my-3'> 
-                        <img className="w-100" src={ServiceCare} alt="Blog Post" />
-                        <div className='p-2 d-flex justify-content-evenly'>
-                            <p> <span> <FontAwesomeIcon  className="secondaryTextColor me-1" icon={faCalendarAlt}></FontAwesomeIcon></span> Monday 05, September 2021</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faUserAlt}></FontAwesomeIcon></span>By Author</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faEye}></FontAwesomeIcon></span> 68</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faHeart}></FontAwesomeIcon></span> 86</p>
-                        </div>
-                        <h1 className='fontFamilyYesava primaryTextColor fw-bold'> A passion for putting patients first</h1>
-                        <p className="fontFamilyWork text-secondary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
-                            ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-                            augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....
-                        </p>
-
-                        <button style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> <span className="primaryTextColor">Read More </span> <FontAwesomeIcon className="primaryTextColor fs-7" icon={faArrowRight}></FontAwesomeIcon></button>
-                    </div>
-                    {/* Second Post */}
-                    <div className='my-3'> 
-                        <img className="w-100" src={BlogPost1} alt="Blog Post" />
-                        <div className='p-2 d-flex justify-content-evenly'>
-                            <p> <span> <FontAwesomeIcon  className="secondaryTextColor me-1" icon={faCalendarAlt}></FontAwesomeIcon></span> Monday 05, September 2021</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faUserAlt}></FontAwesomeIcon></span>By Author</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faEye}></FontAwesomeIcon></span> 68</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faHeart}></FontAwesomeIcon></span> 86</p>
-                        </div>
-                        <h1 className='fontFamilyYesava primaryTextColor fw-bold'> A passion for putting patients first</h1>
-                        <p className="fontFamilyWork text-secondary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
-                            ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-                            augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....
-                        </p>
-
-                        <button style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> <span className="primaryTextColor">Read More </span> <FontAwesomeIcon className="primaryTextColor fs-7" icon={faArrowRight}></FontAwesomeIcon></button>
-                    </div>
-                    {/* Third Post */}
-                    <div className='my-3'> 
-                        <img className="w-100" src={BlogPost2} alt="Blog Post" />
-                        <div className='p-2 d-flex justify-content-evenly'>
-                            <p> <span> <FontAwesomeIcon  className="secondaryTextColor me-1" icon={faCalendarAlt}></FontAwesomeIcon></span> Monday 05, September 2021</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faUserAlt}></FontAwesomeIcon></span>By Author</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faEye}></FontAwesomeIcon></span> 68</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faHeart}></FontAwesomeIcon></span> 86</p>
-                        </div>
-                        <h1 className='fontFamilyYesava primaryTextColor fw-bold'> A passion for putting patients first</h1>
-                        <p className="fontFamilyWork text-secondary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
-                            ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-                            augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....
-                        </p>
-
-                        <button style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> <span className="primaryTextColor">Read More </span> <FontAwesomeIcon className="primaryTextColor fs-7" icon={faArrowRight}></FontAwesomeIcon></button>
-                    </div>
-                    {/* Fourth Post */}
-                    <div className='my-3'> 
-                        <img className="w-100" src={BlogPost3} alt="Blog Post" />
-                        <div className='p-2 d-flex justify-content-evenly'>
-                            <p> <span> <FontAwesomeIcon  className="secondaryTextColor me-1" icon={faCalendarAlt}></FontAwesomeIcon></span> Monday 05, September 2021</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faUserAlt}></FontAwesomeIcon></span>By Author</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faEye}></FontAwesomeIcon></span> 68</p>
-                            <p> <span> <FontAwesomeIcon className="secondaryTextColor me-1" icon={faHeart}></FontAwesomeIcon></span> 86</p>
-                        </div>
-                        <h1 className='fontFamilyYesava primaryTextColor fw-bold'> A passion for putting patients first</h1>
-                        <p className="fontFamilyWork text-secondary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
-                            ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-                            augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....
-                        </p>
-
-                        <button style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> <span className="primaryTextColor">Read More </span> <FontAwesomeIcon className="primaryTextColor fs-7" icon={faArrowRight}></FontAwesomeIcon></button>
-                    </div>
-                    
+                {newsArry.map(news=>
+                    <SingleNewsItem id={news.id} history={history} title={news.title} key={news.id} img={news.img} details={news.details}></SingleNewsItem>
+                )}
                 </Col>
                 <Col lg={4} className="p-5 mt-3">
                     <Row className="mb-3">

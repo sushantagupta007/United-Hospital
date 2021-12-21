@@ -11,8 +11,12 @@ import R5 from '../../Image/R5.png';
 import R6 from '../../Image/R6.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 const SingleNewsBlog = () => {
 
+    const location = useLocation(); 
+    const {img} = location.state
+    console.log(location)
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         reset();
@@ -22,7 +26,7 @@ const SingleNewsBlog = () => {
         <Container>
             <Row>
                 <Col lg={8} className="pt-5">
-                    <img className="w-100 rounded" src={BlogPost} alt="" />
+                    <img className="w-100 rounded" src={img} alt="" />
                     <div>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -68,7 +72,7 @@ const SingleNewsBlog = () => {
                     </div>
                 </Col>
 
-                <Col lg={4} className=" pt-5">
+                <Col lg={4} className="pt-5">
                     <Row className="mb-3">
                         <form onSubmit={handleSubmit(onSubmit)} className="primaryBgColor d-flex justify-content-between px-0">
                                 <input className="p-1 text-white bg-transparent w-100 border-0" type="text" placeholder="Search"{...register("search", { required: true}) }/>

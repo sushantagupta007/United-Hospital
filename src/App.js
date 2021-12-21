@@ -25,6 +25,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 
 function App() {
 
+  
   return (
   <AuthProvider>
     <Router>
@@ -47,12 +48,15 @@ function App() {
         <Route path="/appointment">
           <AppointmentPage></AppointmentPage>
         </Route>
-        <Route path="/blog">
-          <Blog></Blog>
-        </Route>
-        <Route path="/singlenews">
+        <Route path="/singlenews/:id">
           <SingleNews></SingleNews>
         </Route>
+        <Route exact path="/blog">
+          <Blog></Blog>
+        </Route>
+        {/* <Route path="/singlenews">
+         
+        </Route> */}
         <Route exact path="/">
           <Home></Home>
         </Route>
