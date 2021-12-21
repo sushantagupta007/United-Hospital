@@ -34,35 +34,216 @@ const newsArry = [
         id:1, 
         img:BlogPost,
         title: "News Title 1",
-        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
         ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News1`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        `,
+        category:"Surgery"
     },
     {
         id:2, 
-        img:BlogPost1,
-        title: "News Title 2",
-        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        img:BlogPost,
+        title: "News Title 1",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
         ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News1`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        `,
+        category:"Surgery"
     },
     {
-        id:3,
-        img:BlogPost2,
-        title: "News Title 3",
-        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        id:3, 
+        img:BlogPost1,
+        title: "News Title 2",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
         ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News2`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        `,
+        category:"Health Care"
     },
     {
         id:4,
+        img:BlogPost2,
+        title: "News Title 3",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News3`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`,
+        category:"Professional"
+    },
+    {
+        id:5,
         img:BlogPost3,
         title: "News Title 4",
-        details: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
         ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News4`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor`,
+        category:"Medical"
     },
-   
+    {
+        id:6, 
+        img:BlogPost,
+        title: "News Title 5",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News1`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        `,
+        category:"Surgery"
+    },
+    {
+        id:7, 
+        img:BlogPost1,
+        title: "News Title 6",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News2`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        `,
+        category:"Health Care"
+    },
+    {
+        id:8,
+        img:BlogPost2,
+        title: "News Title 7",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News3`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et....`,
+        category:"Professional"
+    },
+    {
+        id:9,
+        img:BlogPost3,
+        title: "News Title 8",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News4`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor`,
+        category:"Medical"
+    },
+    {
+        id:10,
+        img:BlogPost3,
+        title: "News Title 8",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News4`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor`,
+        category:"Medical"
+    },
+    {
+        id:11,
+        img:BlogPost3,
+        title: "News Title 8",
+        small: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.More News4`,
+
+        details:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor  
+        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor
+        ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor`,
+        category:"Medical"
+    }
 ]
   
     
@@ -75,7 +256,7 @@ const newsArry = [
             <Row>
                 <Col lg={8} className="p-5">
                 {newsArry.map(news=>
-                    <SingleNewsItem id={news.id} history={history} title={news.title} key={news.id} img={news.img} details={news.details}></SingleNewsItem>
+                    <SingleNewsItem id={news.id} history={history} title={news.title} key={news.id} img={news.img} small={news.small} details={news.details}></SingleNewsItem>
                 )}
                 </Col>
                 <Col lg={4} className="p-5 mt-3">
@@ -158,25 +339,33 @@ const newsArry = [
                                     Surgery
                                 </Col>
                                 <Col xs={3} lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 3</div>
+                                    <div id="departmentNews" className="secondaryBgColor"> 
+                                        {newsArry.filter(item=>item.category=='Surgery').length}                                    
+                                    </div>
                                 </Col>
                                 <Col xs={9} lg={9}>
                                  HealthCare
                                 </Col>
                                 <Col  xs={3} lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 5</div>
+                                    <div id="departmentNews" className="secondaryBgColor">
+                                        {newsArry.filter(item=>item.category=='Health Care').length}
+                                    </div>
                                 </Col>
                                 <Col  xs={9} lg={9}>
                                  Medical 
                                 </Col>
                                 <Col xs={3} lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 8</div>
+                                    <div id="departmentNews" className="secondaryBgColor"> 
+                                        {newsArry.filter(item=>item.category=='Medical').length}
+                                    </div>
                                 </Col>
                                 <Col xs={9} lg={9}>
                                  Professional
                                 </Col>
                                 <Col xs={3} lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 10</div>
+                                    <div id="departmentNews" className="secondaryBgColor"> 
+                                        {newsArry.filter(item=>item.category=='Professional').length}
+                                    </div>
                                 </Col>
                             </Row>
                         </Container>

@@ -15,7 +15,7 @@ import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 const SingleNewsBlog = () => {
 
     const location = useLocation(); 
-    const {img} = location.state
+    const {img,details} = location.state
     console.log(location)
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
@@ -29,34 +29,7 @@ const SingleNewsBlog = () => {
                     <img className="w-100 rounded" src={img} alt="" />
                     <div>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Quisque placerat scelerisque tortor ornare ornare. 
-                        Quisque placerat scelerisque tortor ornare ornare Convallis 
-                        felis vitae tortor augue. Velit nascetur proin massa in. 
-                        Consequat faucibus porttitor enim Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit. Quisque placerat scelerisque 
-                        tortor ornare ornare. Quisque placerat scelerisque tortor 
-                        ornare ornare Convallis felis vitae tortor augue. Velit 
-                        nascetur proin massa in. Consequat faucibus porttitor 
-                        enim Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Quisque placerat scelerisque tortor ornare ornare. 
-                        Quisque placerat scelerisque tortor ornare ornare Convallis 
-                        felis vitae tortor augue. Velit nascetur proin massa in. 
-                        Consequat faucibus porttitor enim Lorem ipsum dolor sit 
-                        amet, consectetur adipiscing elit. Quisque placerat 
-                        scelerisque tortor ornare ornare. Quisque placerat 
-                        scelerisque tortor ornare ornare Convallis felis 
-                        vitae tortor augue. Velit nascetur proin massa in. 
-                        Consequat faucibus porttitor enim Lorem ipsum dolor 
-                        sit amet, consectetur adipiscing elit. Quisque placerat 
-                        scelerisque tortor ornare ornare. Quisque placerat 
-                        scelerisque tortor ornare ornare Convallis felis vitae tortor 
-                        augue. Velit nascetur proin massa in. Consequat faucibus porttitor
-                         enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                         Quisque placerat scelerisque tortor ornare ornare. Quisque 
-                         placerat scelerisque tortor ornare ornare Convallis felis 
-                         vitae tortor augue. Velit nascetur proin massa in. Consequat 
-                         faucibus porttitor enim et.
+                            {details}
                         </p>
                     </div>
                     <div className="d-flex justify-content-between">
