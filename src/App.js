@@ -19,6 +19,7 @@ import AppointmentPage from './Pages/AppointmentPage/AppointmentPage';
 import Blog from './Pages/Blog/Blog';
 import SingleNews from './Pages/SingleNews/SingleNews';
 import AuthProvider from './AuthProvider/AuthProvider';
+import RepeatSingleNews from './Component/RepeatSingleNews/RepeatSingleNews';
 
 
 
@@ -48,15 +49,15 @@ function App() {
         <Route path="/appointment">
           <AppointmentPage></AppointmentPage>
         </Route>
-        <Route path="/singlenews/:id">
+        <Route path="/singlenews/:category/:id">
           <SingleNews></SingleNews>
         </Route>
         <Route exact path="/blog">
           <Blog></Blog>
         </Route>
-        {/* <Route path="/singlenews">
-         
-        </Route> */}
+        <Route path="/repeatSingle">
+         <RepeatSingleNews></RepeatSingleNews>
+        </Route>
         <Route exact path="/">
           <Home></Home>
         </Route>

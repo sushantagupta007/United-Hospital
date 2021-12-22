@@ -61,8 +61,6 @@ const newsArry = [
         augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
         ornare ornare. Quisque placerat scelerisque tortor ornare ornare Convallis felis vitae tortor 
-        augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et, 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor 
         `,
         category:"Surgery"
     },
@@ -256,12 +254,12 @@ const newsArry = [
             <Row>
                 <Col lg={8} className="p-5">
                 {newsArry.map(news=>
-                    <SingleNewsItem id={news.id} history={history} title={news.title} key={news.id} img={news.img} small={news.small} details={news.details}></SingleNewsItem>
+                    <SingleNewsItem allData={newsArry} id={news.id} category={news.category} history={history} title={news.title} key={news.id} img={news.img} small={news.small} details={news.details}></SingleNewsItem>
                 )}
                 </Col>
                 <Col lg={4} className="p-5 mt-3">
                     <Row className="mb-3">
-                        <form onSubmit={handleSubmit(onSubmit)} className="primaryBgColor d-flex justify-content-between px-0">
+                            <form onSubmit={handleSubmit(onSubmit)} className="primaryBgColor d-flex justify-content-between px-0">
                                 <input className="p-1 text-white bg-transparent w-100 border-0" type="text" placeholder="Search"{...register("search", { required: true}) }/>
                                 <input  type="submit" className='primaryBgColor'  value="Search"/>
                             </form>

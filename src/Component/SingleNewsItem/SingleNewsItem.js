@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 
 const SingleNewsItem = (props) => {
-    const {img,small,id,history,key,title,details} = props
+    const {img,small,id,history,key,title,details,category,allData} = props
 
-    console.log(details)
+    
 
     return (
     <div className='my-3'> 
@@ -19,11 +19,12 @@ const SingleNewsItem = (props) => {
         </div>
         <h1 className='fontFamilyYesava primaryTextColor fw-bold'> {title}</h1>
         <p className="fontFamilyWork text-secondary"> {small}</p>
-       
+        
         <NavLink 
             to={{
-                pathname: `/singlenews/${id}`,
-                state: { img: img, details:details }
+                
+                pathname: `/singlenews/${category}/${id}`,
+                state: {id:id, img: img, details:details,category:category,allData:allData }
             }}
            
             id={key} 

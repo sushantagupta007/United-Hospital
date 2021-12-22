@@ -18,10 +18,8 @@ import slider from 'react-slick/lib/slider';
 const SingleNewsBlog = () => {
     const history = useHistory();
     const location = useLocation(); 
-    const {img,details,category,id,allData} = location.state
-    
-    console.log(allData)
-
+    console.log(location.state)
+   
     const { register, handleSubmit,reset } = useForm();
     
     const onSubmit = data => {
@@ -31,34 +29,18 @@ const SingleNewsBlog = () => {
 
    
    
-    const handlePreviousClick =() =>{
-        //Filter from Array Data From 
-        const newArray = allData.filter(item=>item.category==category)  
-        console.log(newArray.length)
-        const index = newArray.map(e => e.id).indexOf(id);
-        let newIndex 
-        console.log("Old Index",index)
-        newIndex = index+1
-        console.log("NewIndex",newIndex)
-        const newIndexArray = newArray[newIndex]
-      history.push({
-          pathname:'/repeatSingle',
-          state:{newArray:newIndexArray,allData:allData,category:category,details:details}
-      })
-    }
-
     return (
         <Container>
             <Row>
                 <Col lg={8} className="pt-5">
-                    <img className="w-100 rounded" src={img} alt="" />
+                    <img className="w-100 rounded" src='' alt="" />
                     <div>
                         <p>
-                            {details}
+                            kjhkj
                         </p>
                     </div>
                     <div className="d-flex justify-content-between">
-                        <button onClick={handlePreviousClick} style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> 
+                        <button style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> 
                             <FontAwesomeIcon className="primaryTextColor fs-7 me-1" icon={faArrowLeft}></FontAwesomeIcon>
                             <span className="primaryTextColor"> Previous Article </span> 
                             
