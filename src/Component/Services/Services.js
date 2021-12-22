@@ -9,24 +9,10 @@ import ServiceImage1 from '../../Image/ServiceImage.png'
 import ServiceImage2 from '../../Image/ServiceImage2.png'
 
 import './Services.css'
-import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
-
-const para1 = {
-    color:'#159EEC',
-    fontWeight:700,
-    textTransform: "uppercase",
-    fontFamily:'Work Sans',
-    fontSize:'18px'
-}
+import { useHistory } from 'react-router-dom';
 
 
 
-const para2 ={
-    color:"rgba(33, 33, 36, 1)",
-    fontFamily:'Work Sans',
-    fontSize:"16px",
-    fontWeight:400,
-}
 
 const para2Bg ={
     backgroundColor:"#1F2B6C"
@@ -37,14 +23,9 @@ const title ={
     fontWeight:'bold',
     fontSize:"26px",
 }
-const h3 ={
-    color:"#1F2B6C",
-    fontFamily:'Yeseva One',
-    fontWeight:400,
-    fontSize:"26px"
-}
+
 const Services = () => {
-    const location = useLocation(); 
+    
     const history = useHistory(); 
     const handleClick =() =>{
         history.replace('/service')
@@ -110,16 +91,16 @@ const Services = () => {
                     <Row>
                         <Col lg={6} className="p-0 m-0">
                         <ul>
-                            <li className="d-flex align-items-center" className="fontFamilyWork fs-6 fontWeight400"> A Passion for Healing</li>
-                            <li className="d-flex align-items-center" className="fontFamilyWork fs-6 fontWeight400"> All our best</li>
-                            <li className="d-flex align-items-center" className="fontFamilyWork fs-6 fontWeight400"> A Legacy of Excellence</li>
+                            <li className="d-flex align-items-center fontFamilyWork fs-6 fontWeight400"> A Passion for Healing</li>
+                            <li className="d-flex align-items-center fontFamilyWork fs-6 fontWeight400"> All our best</li>
+                            <li className="d-flex align-items-center fontFamilyWork fs-6 fontWeight400"> A Legacy of Excellence</li>
                         </ul>
                         </Col>
                         <Col lg={6}>
                             <ul>
-                                <li className="d-flex align-items-center" className="fontFamilyWork fs-6 fontWeight400"> 5-Star Care</li>
-                                <li className="d-flex align-items-center" className="fontFamilyWork fs-6 fontWeight400"> Believe in Us </li>
-                                <li className="d-flex align-items-center" className="fontFamilyWork fs-6 fontWeight400"> Always Caring</li>
+                                <li className="d-flex align-items-center fontFamilyWork fs-6 fontWeight400"> 5-Star Care</li>
+                                <li className="d-flex align-items-center fontFamilyWork fs-6 fontWeight400"> Believe in Us </li>
+                                <li className="d-flex align-items-center fontFamilyWork fs-6 fontWeight400"> Always Caring</li>
                             </ul>
                         </Col>
                     </Row>
@@ -138,10 +119,10 @@ const Services = () => {
                 </Col>
                 <Col  lg={3} className="d-none d-md-block">
                     <Row className="mb-3">
-                        <img src={ServiceImage1} alt="Service Image"/>
+                        <img src={ServiceImage1} alt="Service"/>
                     </Row>
                     <Row className="mt-3">
-                        <img src={ServiceImage2} alt="Service Image"/>
+                        <img src={ServiceImage2} alt="Service"/>
                     </Row>
                 </Col>
             </Row>

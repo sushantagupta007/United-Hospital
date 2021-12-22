@@ -1,6 +1,7 @@
-import React,{useState} from 'react';
+
 import { GoogleAuthProvider,getAuth,signInWithPopup, signOut } from "firebase/auth";
 import fireBaseInitialization from '../Firebase/firebase.init';
+import { useState } from 'react';
 
 //Initialization of Auth
 fireBaseInitialization(); 
@@ -17,13 +18,7 @@ const useFirebase = () => {
             console.log(loggedUser)
         }).catch((error) => {
             // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // The email of the user's account used.
-            const email = error.email;
-            // The AuthCredential type that was used.
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            // ...
+         
         });
     }
     const signOutUser = ()=>{

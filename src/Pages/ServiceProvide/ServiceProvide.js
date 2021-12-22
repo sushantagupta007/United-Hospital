@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';
-import Banner from './../../Component/Banner/Banner';
+
 import Contact from './../../Component/Contact/Contact';
 import FreeCheckUp from '../../Component/FreeCheckUp/FreeCheckUp'
 import TopHeader from '../../Component/TopHeader/TopHeader';

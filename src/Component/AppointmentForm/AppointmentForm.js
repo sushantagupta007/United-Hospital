@@ -33,7 +33,7 @@ const AppointmentForm = () => {
                             </Col>
                             <Col lg={6} className='p-0'>
                                 <select {...register("Department")} className="fontFamilyWork text-white inputPadding responsiveWidth primaryBgColor">
-                                    <option className="text-black fontFamilyWork" value="" disabled selected>Department</option>
+                                    <option className="text-black fontFamilyWork" value="" disabled>Department</option>
                                     <option className="text-black fontFamilyWork" value="female">Female</option>
                                     <option className="text-black fontFamilyWork" value="male">Male</option>
                                     <option className="text-black fontFamilyWork" value="other">Other</option>
@@ -70,7 +70,7 @@ const AppointmentForm = () => {
                                                   
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                                 <select {...register("Doctor")} placeholder="Doctor" className="border-0 border-bottom colPadding fontFamilyWork text-white responsiveWidth primaryBgColor">
-                                    <option className="text-black fontFamilyWork"value="" disabled selected>Doctor</option>
+                                    <option className="text-black fontFamilyWork"value="" disabled >Doctor</option>
                                     <option className="text-black fontFamilyWork" value="female">Female</option>
                                     <option className="text-black fontFamilyWork" value="male">Male</option>
                                     <option className="text-black fontFamilyWork" value="other">Other</option>
@@ -78,7 +78,7 @@ const AppointmentForm = () => {
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                                 <select {...register("Department")} placeholder="Department" className="border-0 border-bottom colPadding fontFamilyWork text-white responsiveWidth primaryBgColor">
-                                    <option className="text-black fontFamilyWork" value="" disabled selected>Department</option>
+                                    <option className="text-black fontFamilyWork" value="" disabled >Department</option>
                                     <option className="text-black fontFamilyWork" value="female">Female</option>
                                     <option className="text-black fontFamilyWork" value="male">Male</option>
                                     <option className="text-black fontFamilyWork" value="other">Other</option>

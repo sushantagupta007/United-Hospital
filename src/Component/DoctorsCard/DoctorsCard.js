@@ -3,20 +3,7 @@ import { Card, Button, Row, Col } from 'react-bootstrap';
 import './DoctorCard.css'
 
 const DoctorsCard = (props) => {
-    const para1 = {
-        color:'#159EEC',
-        fontWeight:700,
-        textTransform: "uppercase",
-        fontFamily:'Work Sans',
-        fontSize:'18px'
-    }
     
-    const h3 ={
-        color:"#1F2B6C",
-        fontFamily:'Work Sans',
-        fontWeight:700,
-        fontSize:"26px"
-    }
     const {img} =props
     return (
         <Card id="responsiveCardSize">

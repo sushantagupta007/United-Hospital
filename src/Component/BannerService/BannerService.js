@@ -4,21 +4,20 @@ import React from 'react';
 
 
 import { Breadcrumb, Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faEye, faHeart, faUserAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 import './BannerService.css'
 
-const h3 ={
-    color: "rgba(31, 43, 108, 1)",
-    fontFamily: "Yeseva One",
-    fontWeight:400
-}
+// const h3 ={
+//     color: "rgba(31, 43, 108, 1)",
+//     fontFamily: "Yeseva One",
+//     fontWeight:400
+// }
 
-const bannerContent ={
-    width:"32.5rem",
-    height:'auto'
-}
+// const bannerContent ={
+//     width:"32.5rem",
+//     height:'auto'
+// }
 
 
 

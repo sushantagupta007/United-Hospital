@@ -2,20 +2,20 @@ import React from 'react';
 import './BannerContact.css'; 
 
 
-import BlackDoctor from '../../Image/Doctor.png';
+
 import { Breadcrumb, Container } from 'react-bootstrap';
 
 
-const h3 ={
-    color: "rgba(31, 43, 108, 1)",
-    fontFamily: "Yeseva One",
-    fontWeight:400
-}
+// const h3 ={
+//     color: "rgba(31, 43, 108, 1)",
+//     fontFamily: "Yeseva One",
+//     fontWeight:400
+// }
 
-const bannerContent ={
-    width:"32.5rem",
-    height:'auto'
-}
+// const bannerContent ={
+//     width:"32.5rem",
+//     height:'auto'
+// }
 
 
 

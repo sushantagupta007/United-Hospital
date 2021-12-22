@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row,Col } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import BlogPost from '../../Image/BlogPost.png'; 
+
 
 import R1 from '../../Image/R1.png'; 
 import R2 from '../../Image/R2.png'; 
@@ -12,16 +12,17 @@ import R6 from '../../Image/R6.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useLocation, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import slider from 'react-slick/lib/slider';
+import { useLocation } from 'react-router-dom';
 
-const SingleNewsBlog = () => {
-    const history = useHistory();
+
+
+const RepeatSingleNews = () => {
+    
     const location = useLocation(); 
-    console.log(location.state)
+    const {img,details}= location.state.newArray
    
     const { register, handleSubmit,reset } = useForm();
-    
+
     const onSubmit = data => {
         reset();
         console.log(data)
@@ -33,10 +34,10 @@ const SingleNewsBlog = () => {
         <Container>
             <Row>
                 <Col lg={8} className="pt-5">
-                    <img className="w-100 rounded" src='' alt="" />
+                    <img className="w-100 rounded" src={img} alt="" />
                     <div>
                         <p>
-                            kjhkj
+                            {details}
                         </p>
                     </div>
                     <div className="d-flex justify-content-between">
@@ -164,4 +165,4 @@ const SingleNewsBlog = () => {
     );
 };
 
-export default SingleNewsBlog;
+export default RepeatSingleNews;

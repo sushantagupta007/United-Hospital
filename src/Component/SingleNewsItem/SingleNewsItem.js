@@ -1,10 +1,10 @@
 import React from 'react';
-import { faArrowRight, faCalendarAlt, faEye, faHeart, faSearch, faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faCalendarAlt, faEye, faHeart,faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 
 const SingleNewsItem = (props) => {
-    const {img,small,id,history,key,title,details,category,allData} = props
+    const {img,id,small,key,title,details,category,allData} = props
 
     
 

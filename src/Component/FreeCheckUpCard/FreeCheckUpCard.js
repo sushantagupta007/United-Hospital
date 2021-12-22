@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
-import CheckUpCard from '../../Image/CheckUpCard.png'; 
+
 import './FreeCheckUpCard.css'
 
 import VectorImage from '../../Image/Vector.png'; 
@@ -11,10 +11,10 @@ const FreeCheckUpCard = (props) => {
     return (
         <Card id="customCard" style={{ width: '18rem' }} className="m-0  p-2 w-100">
             <div className="containerId"> 
-                <Card.Img className="image" variant="top" src={img} /> 
+                <Card.Img className="image" variant="top" src={img} alt="" /> 
                 <div className="middle">
                     <div className="text">
-                        <img src={VectorImage} />
+                        <img src={VectorImage} alt="" />
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@ const FreeCheckUpCard = (props) => {
                 <Card.Text className="fontFamilyWork ">
                    {list}
                 </Card.Text>
-                <a id="checkUpLink" className="secondaryTextColor" href="#"> Learn More  <i className="fas fa-arrow-right"> </i> </a>
+                <a id="checkUpLink" className="secondaryTextColor" href="_target_blank"> Learn More  <i className="fas fa-arrow-right"> </i> </a>
         </Card.Body>
     </Card>
     );

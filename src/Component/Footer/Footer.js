@@ -5,12 +5,7 @@ import './Footer.css'
 import { NavLink } from 'react-router-dom';
 const Footer = () => {
 
-    const h3 = {
-        color:'#BFD2F8',
-        fontWeight:700,
-        fontFamily:'Yeseva One',
-        fontSize:'36px'
-    }
+    
 
     const text ={
         color:"#FCFEFE",

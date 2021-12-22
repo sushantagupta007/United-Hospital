@@ -1,5 +1,5 @@
 import React from 'react';
-import QuoteBack from '../../Image/QuoteCare.png';
+
 import QuoteSign from '../../Image/Quote.png'; 
 
 import './Quote.css'; 

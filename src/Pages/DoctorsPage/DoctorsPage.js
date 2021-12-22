@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Banner from '../../Component/Banner/Banner';
+
 import Contact from '../../Component/Contact/Contact';
 import Footer from '../../Component/Footer/Footer';
 import Header from '../../Component/Header/Header';

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Row,Col } from 'react-bootstrap';
+import { Container, Row,Col} from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import BlogPost from '../../Image/BlogPost.png'; 
+import Paginate from './../Paginate/Paginate';
 
 import R1 from '../../Image/R1.png'; 
 import R2 from '../../Image/R2.png'; 
@@ -9,65 +9,51 @@ import R3 from '../../Image/R3.png';
 import R4 from '../../Image/R4.png'; 
 import R5 from '../../Image/R5.png'; 
 import R6 from '../../Image/R6.png'; 
+import SinglePost from './../SinglePost/SinglePost';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useLocation, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import slider from 'react-slick/lib/slider';
+
+import { useEffect,useState } from 'react';
+import {useLocation } from 'react-router-dom';
+
+
+
+
+
 
 const SingleNewsBlog = () => {
-    const history = useHistory();
+    const [posts, setPosts] = useState([]);
     const location = useLocation(); 
-    const {img,details,category,id,allData} = location.state
     
-    console.log(allData)
-
+    
     const { register, handleSubmit,reset } = useForm();
     
     const onSubmit = data => {
         reset();
-        console.log(data)
     };
 
+  
+    const {allData,category} = location.state //News Data From News Component
+    const newArray = allData.filter(item=>item.category===category)  //Based on category new array create
    
-   
-    const handlePreviousClick =() =>{
-        //Filter from Array Data From 
-        const newArray = allData.filter(item=>item.category==category)  
-        console.log(newArray.length)
-        const index = newArray.map(e => e.id).indexOf(id);
-        let newIndex 
-        console.log("Old Index",index)
-        newIndex = index+1
-        console.log("NewIndex",newIndex)
-        const newIndexArray = newArray[newIndex]
-      history.push({
-          pathname:'/repeatSingle',
-          state:{newArray:newIndexArray,allData:allData,category:category,details:details}
-      })
-    }
+    //Array Update with Component Load and set it posts
+    useEffect(() => {
+        setPosts(newArray)
+        }, []);
+
 
     return (
         <Container>
             <Row>
                 <Col lg={8} className="pt-5">
-                    <img className="w-100 rounded" src={img} alt="" />
-                    <div>
-                        <p>
-                            {details}
-                        </p>
-                    </div>
-                    <div className="d-flex justify-content-between">
-                        <button onClick={handlePreviousClick} style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> 
-                            <FontAwesomeIcon className="primaryTextColor fs-7 me-1" icon={faArrowLeft}></FontAwesomeIcon>
-                            <span className="primaryTextColor"> Previous Article </span> 
-                            
-                        </button>
-                        <button style={{backgroundColor:"#BFD2F8"}}className="btn rounded-pill"> 
-                            <span className="primaryTextColor me-1">Next Article </span> 
-                            <FontAwesomeIcon className="primaryTextColor fs-7" icon={faArrowRight}></FontAwesomeIcon>
-                        </button>
-                    </div>
+                    {
+                        //Paginate Component
+                    <Paginate
+                        data={posts}
+                        RenderComponent={SinglePost}
+                        dataLimit={1}
+                    >
+                    </Paginate>
+                    }
                 </Col>
 
                 <Col lg={4} className="pt-5">
@@ -150,25 +136,33 @@ const SingleNewsBlog = () => {
                                     Surgery
                                 </Col>
                                 <Col lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 3</div>
+                                    <div id="departmentNews" className="secondaryBgColor"> 
+                                        {allData.filter(item=>item.category==='Surgery').length}                                    
+                                    </div>
                                 </Col>
                                 <Col lg={9}>
                                  HealthCare
                                 </Col>
                                 <Col lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 5</div>
+                                    <div id="departmentNews" className="secondaryBgColor">
+                                        {allData.filter(item=>item.category==='Health Care').length}  
+                                    </div>
                                 </Col>
                                 <Col lg={9}>
                                  Medical 
                                 </Col>
                                 <Col lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 8</div>
+                                    <div id="departmentNews" className="secondaryBgColor"> 
+                                        {allData.filter(item=>item.category==='Medical').length}  
+                                    </div>
                                 </Col>
                                 <Col lg={9}>
                                  Professional
                                 </Col>
                                 <Col lg={3}>
-                                    <div id="departmentNews" className="secondaryBgColor"> 10</div>
+                                    <div id="departmentNews" className="secondaryBgColor">
+                                        {allData.filter(item=>item.category==='Professional').length}  
+                                    </div>
                                 </Col>
                             </Row>
                         </Container>

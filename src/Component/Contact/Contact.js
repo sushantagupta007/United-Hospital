@@ -1,24 +1,24 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
-import PhoneCall from '../../Image/PhoneCall.png'
+import {Container } from 'react-bootstrap';
+
 
 import './Contact.css'
 const Contact = () => {
 
   
-    const para1 = {
-        fontWeight:'bold',
-        textTransform: "uppercase",
-        fontFamily:'Work Sans',
-        fontSize:'18px',
-    }
+    // const para1 = {
+    //     fontWeight:'bold',
+    //     textTransform: "uppercase",
+    //     fontFamily:'Work Sans',
+    //     fontSize:'18px',
+    // }
 
-    const h3 ={
-        color:"#1F2B6C",
-        fontFamily:'Yeseva One',
-        fontWeight:700,
-        fontSize:"26px"
-    }
+    // const h3 ={
+    //     color:"#1F2B6C",
+    //     fontFamily:'Yeseva One',
+    //     fontWeight:700,
+    //     fontSize:"26px"
+    // }
 
     return (
         <Container className="">
@@ -30,7 +30,7 @@ const Contact = () => {
                 <div  className="row gy-2">
                     <div className="col-lg-3" >
                         <div className='p-3 border tertiaryBgColor'> 
-                            <i class="fs-2 fas fa-phone-volume primaryTextColor"></i>
+                            <i className="fs-2 fas fa-phone-volume primaryTextColor"></i>
                             <p className="fontWeight700 text-uppercase fontFamilyWork fs5_5 primaryTextColor"> Emergency </p>
                             <p className="primaryTextColor"> (237) 681-812-255 </p>
                             <p className="primaryTextColor"> (237) 666-331-894 </p>
