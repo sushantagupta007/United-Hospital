@@ -67,3 +67,5 @@ function Paginate({ data, RenderComponent, dataLimit }) {
 }
     
     export default Paginate
+
+    //Source: https://academind.com/tutorials/reactjs-pagination

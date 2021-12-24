@@ -20,7 +20,10 @@ import Blog from './Pages/Blog/Blog';
 import SingleNews from './Pages/SingleNews/SingleNews';
 import AuthProvider from './AuthProvider/AuthProvider';
 import RepeatSingleNews from './Component/RepeatSingleNews/RepeatSingleNews';
+import Registration from './Component/Registration/Registration';
 
+import SignIn from './Component/SignIn/SignIn';
+import SignUp from './Component/SignUp/SignUp';
 
 
 
@@ -54,6 +57,15 @@ function App() {
         </Route>
         <Route exact path="/blog">
           <Blog></Blog>
+        </Route>
+        <Route path="/regis">
+          <Registration></Registration>
+        </Route>
+        <Route path="/signin">
+          <SignIn></SignIn>
+        </Route>
+        <Route path="/signup">
+          <SignUp></SignUp>
         </Route>
         <Route path="/repeatSingle">
          <RepeatSingleNews></RepeatSingleNews>
