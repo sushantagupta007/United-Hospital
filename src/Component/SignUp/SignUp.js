@@ -1,5 +1,5 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import React, { useEffect,useState,Button } from 'react';
+import { Col, Container, Row, Modal, Alert } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './SignUp.css';
 import useAuth from '../../Hooks/useAuth';
@@ -7,22 +7,24 @@ import useAuth from '../../Hooks/useAuth';
 import Logo from '../../Image/logo.jpg'
 import { Link } from 'react-router-dom';
 
+import CustomModal from './../Modal/CustomModal ';
+
 const CustomMarginSignForm ={
     marginLeft:"3.8px"
 }
 
 
 const SignUp = () => {
-    const { register, handleSubmit,reset } = useForm();
-    const {googleSignIn,userCreate,newUser } = useAuth(); 
-    
-    const onSubmit = data => {
-        const email= data.email
-        const password = data.password
-        userCreate(email,password)
-        reset(); 
-        console.log(data)};
+        const { register, handleSubmit,reset } = useForm();
+        const {googleSignIn,userCreate,newUser} = useAuth(); 
+        const [newregUser, setNewRegUser] = useState(null)
 
+        const onSubmit = data => {
+            const email= data.email
+            const password = data.password
+            userCreate(email,password)
+            reset(); 
+        };
         const handleGoogleSign = ()=>{
             googleSignIn(); 
             console.log("clicked")
@@ -30,10 +32,19 @@ const SignUp = () => {
         const handleFacebookSign = ()=>{
             console.log("Clicked")
         }
+
+        //Componen update when newUser change. 
+        useEffect(()=>{
+            setNewRegUser(newUser)
+            setTimeout(() => {
+                setNewRegUser(null)
+            }, 1000);
+        },[newUser])
+     
     return (
-        <Container fluid id="signMainContainer" >
-            
+        <Container  fluid id="signMainContainer" >
             <Container  id="regForm" className="w-50 mx-auto border py-4 rounded">
+                {newregUser? <Alert variant="success">Account was created successfully</Alert> :""}
                 <Container>
                 <h6 className="text-center fontFamilyWork fontWeight700 primaryTextColor fs-1 "> SignUp  </h6>
                 </Container>
@@ -69,7 +80,7 @@ const SignUp = () => {
                         <Link to="/" className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
                     </Container>
                     <Container>
-                        <button id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="button"> SIGN UP</button>
+                        <button  id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> SIGN UP</button>
                     </Container>
                 </form>
                     <Container className="d-flex flex-column align-items-center justify-content-center">
