@@ -24,6 +24,8 @@ import Registration from './Component/Registration/Registration';
 
 import SignIn from './Component/SignIn/SignIn';
 import SignUp from './Component/SignUp/SignUp';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import DoctorProfile from './Component/DoctorProfile/DoctorProfile';
 
 
 
@@ -46,12 +48,15 @@ function App() {
         <Route path="/doctor">
           <DoctorsPage></DoctorsPage>
         </Route>
+        <Route path="/doctorprofile">
+          <DoctorProfile></DoctorProfile>
+        </Route>
         <Route path="/contact">
           <ContactPage></ContactPage>
         </Route>
-        <Route path="/appointment">
+        <PrivateRoute path="/appointment">
           <AppointmentPage></AppointmentPage>
-        </Route>
+        </PrivateRoute>
         <Route path="/singlenews/:category/:id">
           <SingleNews></SingleNews>
         </Route>

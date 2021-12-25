@@ -5,7 +5,7 @@ import './SignUp.css';
 import useAuth from '../../Hooks/useAuth';
 
 import Logo from '../../Image/logo.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import CustomModal from './../Modal/CustomModal ';
 
@@ -15,15 +15,19 @@ const CustomMarginSignForm ={
 
 
 const SignUp = () => {
+        const history = useHistory(); 
         const { register, handleSubmit,reset } = useForm();
-        const {googleSignIn,userCreate,newUser} = useAuth(); 
+        const {googleSignIn,userCreate,newUser,error} = useAuth(); 
         const [newregUser, setNewRegUser] = useState(null)
 
         const onSubmit = data => {
             const email= data.email
             const password = data.password
-            userCreate(email,password)
+            const name = data.name
+            console.log(data)
+            userCreate(name,email,password,history)
             reset(); 
+            
         };
         const handleGoogleSign = ()=>{
             googleSignIn(); 
@@ -35,7 +39,6 @@ const SignUp = () => {
 
         //Componen update when newUser change. 
         useEffect(()=>{
-            setNewRegUser(newUser)
             setTimeout(() => {
                 setNewRegUser(null)
             }, 1000);
@@ -45,12 +48,25 @@ const SignUp = () => {
         <Container  fluid id="signMainContainer" >
             <Container  id="regForm" className="w-50 mx-auto border py-4 rounded">
                 {newregUser? <Alert variant="success">Account was created successfully</Alert> :""}
+                
                 <Container>
                 <h6 className="text-center fontFamilyWork fontWeight700 primaryTextColor fs-1 "> SignUp  </h6>
                 </Container>
            
                 <form onSubmit={handleSubmit(onSubmit)} className='my-2'>
                     <div className="container py-1">
+                        <div className="col m-0"> 
+                            <div className="p-1 d-flex flex-column m-0">
+                            <label className='primaryTextColor fw-bold'> Name </label>
+                                    <input 
+                                        style={{fontFamily:"Arial, FontAwesome"}}
+                                        className='m-0 px-0 py-2 border-0 border-bottom'
+                                        type="text"
+                                        placeholder='&#xF007; Sushanta Gupta'
+                                        {...register("name", { required: true})} 
+                                    />
+                            </div>
+                        </div>
                         <div className="col m-0"> 
                             <div className="p-1 d-flex flex-column m-0">
                             <label className='primaryTextColor fw-bold'> Email </label>
@@ -64,7 +80,7 @@ const SignUp = () => {
                                     />
                             </div>
                         </div>
-                        <div> 
+                        <div className="col m-0"> 
                             <div className="p-1 d-flex flex-column m-0">
                                 <label className='primaryTextColor fw-bold'> Password </label>
                                 <input 
@@ -76,9 +92,7 @@ const SignUp = () => {
                             </div>
                         </div>
                     </div>
-                    <Container className="d-flex justify-content-end">
-                        <Link to="/" className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
-                    </Container>
+                    
                     <Container>
                         <button  id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> SIGN UP</button>
                     </Container>

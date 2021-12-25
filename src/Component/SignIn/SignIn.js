@@ -1,11 +1,12 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Alert, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './SignIn.css';
 import useAuth from './../../Hooks/useAuth';
 
-import Logo from '../../Image/logo.jpg'
-import { Link } from 'react-router-dom';
+
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const CustomMarginSignForm ={
     marginLeft:"3.8px"
@@ -13,27 +14,34 @@ const CustomMarginSignForm ={
 
 
 const SignIn = () => {
-    const { register, handleSubmit,reset } = useForm();
-    const {googleSignIn} = useAuth(); 
-    const {userCreate}= useAuth(); 
-    const onSubmit = data => {
-        const email= data.email
-        const password = data.password
-        userCreate(email,password)
-        reset(); 
-        console.log(data)};
+        const { register, handleSubmit,reset } = useForm();
+        const {googleSignIn,userSignIn,loggedUser} = useAuth(); 
+        // const [presentLog,setPresnetLog] = useState(loggedUser); 
+
+        const location = useLocation(); 
+        const history = useHistory(); 
+   
+        const onSubmit = data => {
+            const email = data.email
+            const password = data.password
+            userSignIn(email,password,location,history)
+            console.log(data)
+            reset();   
+        };
 
         const handleGoogleSign = ()=>{
-            googleSignIn(); 
+            googleSignIn(location,history); 
             console.log("clicked")
         }
         const handleFacebookSign = ()=>{
             console.log("Clicked")
         }
+       
+    
     return (
         <Container fluid id="signMainContainer" >
-            
             <Container  id="regForm" className="w-50 mx-auto border py-4 rounded">
+            {/* {loggedUser? <Alert variant="success">Successful Login</Alert> :""} */}
                 <Container>
                 <h6 className="text-center fontFamilyWork fontWeight700 primaryTextColor fs-1 "> Login  </h6>
                 </Container>
@@ -69,7 +77,7 @@ const SignIn = () => {
                         <Link to="/" className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
                     </Container>
                     <Container>
-                        <button id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="button"> LOGIN</button>
+                        <button id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> LOGIN</button>
                     </Container>
                 </form>
                     <Container className="d-flex flex-column align-items-center justify-content-center">
@@ -86,7 +94,7 @@ const SignIn = () => {
                             </div> 
                             
                         </div>
-                        <Link to="/regis" className=''> New Patient? Please Register</Link>
+                        <Link to="/signup" className=''> New User? Please SignUp</Link>
                     </Container>
             </Container>
            
@@ -95,11 +103,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-{/* <Row> 
-                            <Col>
-                                
-                            </Col>
-                            <Col>
-                                
-                            </Col>
-                        </Row> */}

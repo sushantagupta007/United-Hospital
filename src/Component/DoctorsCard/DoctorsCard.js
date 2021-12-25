@@ -1,9 +1,12 @@
 import React from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import './DoctorCard.css'
+import { NavLink } from 'react-router-dom';
 
 const DoctorsCard = (props) => {
     
+   
+
     const {img} =props
     return (
         <Card id="responsiveCardSize">
@@ -25,9 +28,9 @@ const DoctorsCard = (props) => {
                     </Row>                                                                                                                                                
                 </div>                                 
            </Card.Body>                                                      
-            <Button className="customBg"  type="button">
+            <NavLink to="/doctorprofile" className="btn btn-primary customBg"  type="button">
                 View Profile
-            </Button>                                                                 
+            </NavLink>                                                                 
         </Card>                                                                  
     );
 };
