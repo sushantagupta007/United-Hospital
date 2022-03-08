@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './SignIn.css';
 import useAuth from './../../Hooks/useAuth';
@@ -37,7 +37,9 @@ const SignIn = () => {
             console.log("Clicked")
         }
        
-    
+        const handleClick =() =>{
+            console.log("Clicked")
+        }
     return (
         <Container fluid id="signMainContainer" >
             <Container  id="regForm" className="w-50 mx-auto border py-4 rounded">
@@ -74,7 +76,7 @@ const SignIn = () => {
                         </div>
                     </div>
                     <Container className="d-flex justify-content-end">
-                        <Link to="/" className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
+                        <Link onClick={handleClick}className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
                     </Container>
                     <Container>
                         <button id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> LOGIN</button>

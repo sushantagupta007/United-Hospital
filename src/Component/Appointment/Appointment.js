@@ -29,7 +29,7 @@ const Appointment = () => {
                                 <input 
                                     className="colPadding border-0 text-white fontFamilyWork responsiveWidth responsiveBorder primaryBgColor"
                                     type="text" 
-                                    placeholder="Name" {...register("Name", { required: true, maxLength: 20 })} 
+                                    placeholder="Name" {...register("Name", { required: true})} 
                                 />  
                             </Col>
                             <Col lg={6} className='p-0'>
@@ -43,29 +43,29 @@ const Appointment = () => {
                             <Col lg={6} className="p-0 border-end border-bottom">
                                 <input 
                                     className="colPadding border-0 fontFamilyWork responsiveWidth primaryBgColor"
-                                    type="year" 
-                                    placeholder="Email" {...register("Email", { required: true, maxLength: 20 })} 
+                                    type="email" 
+                                    placeholder="Email" {...register("Email", { required: true })} 
                                 />
                             </Col>
                             <Col lg={6} xs={12} className="p-0 border-end"> 
                                 <input 
                                     className="border-0 border-bottom colPadding fontFamilyWork text-white responsiveWidth  primaryBgColor"
                                     type="text" 
-                                    placeholder="Phone" {...register("Phone", { required: true, maxLength: 20 })} 
+                                    placeholder="Phone" {...register("Phone", { required: true})} 
                                 />
                             </Col>
                             <Col lg={6 } className="p-0 border-end">
                                 <input 
                                     className="border-0 border-bottom colPaddingborder-0 colPadding fontFamilyWork responsiveWidth primaryBgColor "
                                     type="date" 
-                                    placeholder="Date" {...register("Date", { required: true, maxLength: 20 })} 
+                                    placeholder="Date" {...register("Date", { required: true})} 
                                 />
                             </Col>
                             <Col lg={6} className="p-0 border-end">
                                 <input 
                                     className="border-0 border-bottom colPadding responsiveWidth primaryBgColor"
                                     type="time" 
-                                    placeholder="Time" {...register("Time", { required: true, maxLength: 20 })} 
+                                    placeholder="Time" {...register("Time", { required: true})} 
                                 />
                             </Col>
                                                   

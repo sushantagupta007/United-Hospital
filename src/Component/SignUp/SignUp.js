@@ -97,20 +97,9 @@ const SignUp = () => {
                         <button  id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> SIGN UP</button>
                     </Container>
                 </form>
-                    <Container className="d-flex flex-column align-items-center justify-content-center">
-                        <p className='text-center'> or Sign Up Using</p>
-                        {/* <Link to="/regis" className=''> New Patient? Please Register</Link> */}
-                    </Container>
+                    
                     <Container style={CustomMarginSignForm} className="border-top py-2">
-                        <div id="fontAwesomeDiv" className="d-flex justify-content-center"> 
-                            <div className="d-flex " >
-                                <Row> 
-                                    <Col> <a onClick={handleGoogleSign} > <i style={{backgroundColor:"#1F2B6C"}} className="border rounded-pill fab fa-google p-2 text-white"> </i> </a> </Col>
-                                    <Col> <a onClick={handleFacebookSign}>  <i style={{backgroundColor:"#1F2B6C"}} className="rounded-pill p-2 fab fa-facebook text-white"> </i> </a> </Col>
-                                </Row>
-                            </div> 
-                        </div>
-                        <Link to="/signin" className=''> Already User? Please Login</Link>
+                        <Link to="/signin" > Already User? Please Login</Link>
                     </Container>
             </Container>
            

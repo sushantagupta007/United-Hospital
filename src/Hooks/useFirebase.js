@@ -2,7 +2,7 @@
 import { GoogleAuthProvider,getAuth,signInWithPopup, 
     signOut,createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    onAuthStateChanged,updateProfile,sendEmailVerification } 
+    onAuthStateChanged,updateProfile,sendEmailVerification,sendPasswordResetEmail } 
     
 from "firebase/auth";
 
@@ -27,7 +27,6 @@ const useFirebase = () => {
             .then((result) => {
                 setError(result)
             })
-        
         }
         const googleSignIn = (location,history) =>{
             signInWithPopup(auth, googleProvider)
@@ -61,10 +60,21 @@ const useFirebase = () => {
                     })
                     .catch((error) => {
                       console.log(error)
-                    })
-                    
-        }
+                    })     
+            }
 
+        const passWordReset=(email) =>{
+            sendPasswordResetEmail(auth, email)
+            .then(() => {
+                // Password reset email sent!
+                // ..
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+        }
         const userSignIn =(email,password,location,history)=>{
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -121,8 +131,9 @@ const useFirebase = () => {
         userCreate,
         userSignIn,
         loggedUser,
-        error
-    }   
+        error,
+        passWordReset
+        }   
     );
 };
 
