@@ -2,10 +2,9 @@ import React from 'react';
 import { Container, Row,Col } from 'react-bootstrap';
 
 import Doctor1 from '../../Image/Doctors1.png'
-import Doctors2 from '../../Image/Doctors2.png'
-import Doctors3 from '../../Image/Doctors3.png'
 
-import DoctorsCard from './../DoctorsCard/DoctorsCard';
+
+
 
 const DoctorProfile = () => {
     return (

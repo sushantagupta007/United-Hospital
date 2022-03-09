@@ -1,13 +1,13 @@
-import React, { useEffect,useState,Button } from 'react';
-import { Col, Container, Row, Modal, Alert } from 'react-bootstrap';
+import React, { useEffect,useState} from 'react';
+import {Container,Alert } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './SignUp.css';
 import useAuth from '../../Hooks/useAuth';
 
-import Logo from '../../Image/logo.jpg'
+
 import { Link, useHistory } from 'react-router-dom';
 
-import CustomModal from './../Modal/CustomModal ';
+
 
 const CustomMarginSignForm ={
     marginLeft:"3.8px"
@@ -17,7 +17,7 @@ const CustomMarginSignForm ={
 const SignUp = () => {
         const history = useHistory(); 
         const { register, handleSubmit,reset } = useForm();
-        const {googleSignIn,userCreate,newUser,error} = useAuth(); 
+        const {userCreate,newUser} = useAuth(); 
         const [newregUser, setNewRegUser] = useState(null)
 
         const onSubmit = data => {
@@ -29,13 +29,7 @@ const SignUp = () => {
             reset(); 
             
         };
-        const handleGoogleSign = ()=>{
-            googleSignIn(); 
-            console.log("clicked")
-        }
-        const handleFacebookSign = ()=>{
-            console.log("Clicked")
-        }
+    
 
         //Componen update when newUser change. 
         useEffect(()=>{

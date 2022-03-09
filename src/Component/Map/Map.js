@@ -22,11 +22,11 @@ const Map = () => {
   const [activePark, setActivePark] = useState(null);
 
   useEffect(()=>{
-    fetch('/Data/data.json')
+    fetch('https://hospita-app.herokuapp.com/maps')
     .then(response=>response.json())
     .then (data=>{
-      
-      setData(data.features)})
+      console.log(data)
+      setData(data)})
   },[])
   
   console.log(data)
@@ -41,6 +41,7 @@ const Map = () => {
       />
         {data.map(item=>
         <Marker 
+        key={item._id}
           position={
             [item.geometry.coordinates[1],
             item.geometry.coordinates[0]]

@@ -8,7 +8,7 @@ from "firebase/auth";
 
 import fireBaseInitialization from '../Firebase/firebase.init';
 import { useState, useEffect } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+
 
 //Initialization of Auth
 fireBaseInitialization(); 
@@ -17,7 +17,7 @@ const auth = getAuth();
 
 const useFirebase = () => {
     
-    const history = useHistory();
+
     const [user,setUser] = useState({})
     const [error,setError]= useState();
     const [loggedUser, setLoggUser]= useState({})
@@ -70,9 +70,7 @@ const useFirebase = () => {
                 // ..
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
+               console.log(error)
             });
         }
         const userSignIn =(email,password,location,history)=>{
@@ -99,8 +97,7 @@ const useFirebase = () => {
                 history.push(destination);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                console.log(error)
             });
         }
 

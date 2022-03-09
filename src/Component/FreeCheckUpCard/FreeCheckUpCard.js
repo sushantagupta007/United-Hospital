@@ -4,6 +4,7 @@ import { Card } from 'react-bootstrap';
 import './FreeCheckUpCard.css'
 
 import VectorImage from '../../Image/Vector.png'; 
+import { Link } from 'react-router-dom';
 const FreeCheckUpCard = (props) => {
     const {title,list,img} = props
     
@@ -24,7 +25,7 @@ const FreeCheckUpCard = (props) => {
                 <Card.Text className="fontFamilyWork ">
                    {list}
                 </Card.Text>
-                <a id="checkUpLink" className="secondaryTextColor" href="_target_blank"> Learn More  <i className="fas fa-arrow-right"> </i> </a>
+                <Link to={{pathname:'/serviceDetails', state:{props}}} id="checkUpLink" className="secondaryTextColor"> Learn More  <i className="fas fa-arrow-right"> </i> </Link>
         </Card.Body>
     </Card>
     );

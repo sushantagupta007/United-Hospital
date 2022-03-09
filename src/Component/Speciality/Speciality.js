@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Speciality.css'
 import spciailitySection from '../../Image/Speciality.png';
+import { Link} from 'react-router-dom';
 
 const Speciality = () => {
  
@@ -15,51 +16,56 @@ const Speciality = () => {
             <Row>
                 <Col md={6} xs={12}className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Neurology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Neurology" }}>Neurology</Link>
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox customBg" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p className='text-white'>Bones</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Bones" }}>Bones</Link>
+                    
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Oncology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Oncology" }}>Oncology</Link>
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Otorhinolaryngology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Otorhinolaryngology" }}>Otorhinolaryngology</Link>
+                
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Ophthalmology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Ophthalmology" }}>Ophthalmology</Link>
+                   
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Cardiovascular</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Cardiovascular" }}>Cardiovascular</Link>
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Pulmonology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Pulmonology" }}>Pulmonology</Link>
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Renal Medicine</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Renal Medicine" }}>Renal Medicine</Link>
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Gastroenterology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Gastroenterology" }}>Gastroenterology</Link>
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Urology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Urology" }}>Urology</Link>
+
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Dermatology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Dermatology" }}>Dermatology</Link>
+                    
                 </Col>
                 <Col md={6} xs={12} className="border specialityBox" lg={3}>
                     <img src={spciailitySection} alt ="Neurology" />
-                    <p>Gynaecology</p>
+                    <Link to={{pathname:"/specialityDetails",state:"Gynaecolog" }}>Gynaecology</Link>
                 </Col>
              
             </Row>

@@ -9,7 +9,7 @@ import ServiceImage1 from '../../Image/ServiceImage.png'
 import ServiceImage2 from '../../Image/ServiceImage2.png'
 
 import './Services.css'
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 
 
@@ -42,7 +42,7 @@ const Services = () => {
                     <Row className="d-md-none"> 
                         <Col xs={6} className="d-flex flex-column justify-content-center align-items-center py-3">
                             <img src={Checkup} alt="Checkup" />
-                            <p className="fontFamilyWork fs-6 fontWeight400"> Free Checkup</p>
+                            <p  > Free Checkup</p>
                         </Col>
                         <Col xs={6} className="d-flex flex-column justify-content-center align-items-center py-3 primaryBgColor">
                             <img src={Cardio} alt="Checkup" />

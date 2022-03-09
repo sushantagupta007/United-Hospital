@@ -6,7 +6,7 @@ import useAuth from './../../Hooks/useAuth';
 
 
 import { Link, useLocation, useHistory } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+
 
 const CustomMarginSignForm ={
     marginLeft:"3.8px"
@@ -15,8 +15,8 @@ const CustomMarginSignForm ={
 
 const SignIn = () => {
         const { register, handleSubmit,reset } = useForm();
-        const {googleSignIn,userSignIn,loggedUser} = useAuth(); 
-        // const [presentLog,setPresnetLog] = useState(loggedUser); 
+        const {googleSignIn,userSignIn} = useAuth(); 
+        
 
         const location = useLocation(); 
         const history = useHistory(); 
@@ -76,7 +76,7 @@ const SignIn = () => {
                         </div>
                     </div>
                     <Container className="d-flex justify-content-end">
-                        <Link onClick={handleClick}className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
+                        <Link onClick={handleClick} className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
                     </Container>
                     <Container>
                         <button id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> LOGIN</button>

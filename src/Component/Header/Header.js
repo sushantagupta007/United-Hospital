@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 
 import './Header.css'
 const Header = () => {
-  const {loggedUser,googleSignIn,signOutUser}= useAuth(); 
+  const {loggedUser,signOutUser}= useAuth(); 
 
   const history = useHistory(); 
 

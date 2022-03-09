@@ -28,6 +28,8 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import DoctorProfile from './Component/DoctorProfile/DoctorProfile';
 
 
+import SpecialityDetails from './Component/SpecialityDetails/SpecialityDetails';
+import ServiceDetails from './Component/ServiceDetails/ServiceDetails';
 
 function App() {
 
@@ -74,6 +76,12 @@ function App() {
         </Route>
         <Route path="/repeatSingle">
          <RepeatSingleNews></RepeatSingleNews>
+        </Route>
+        <Route path="/specialityDetails">
+          <SpecialityDetails></SpecialityDetails>
+        </Route>
+        <Route path="/serviceDetails">
+          <ServiceDetails></ServiceDetails>
         </Route>
         <Route exact path="/">
           <Home></Home>

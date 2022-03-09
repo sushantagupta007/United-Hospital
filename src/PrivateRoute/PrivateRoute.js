@@ -3,7 +3,7 @@ import useAuth from "../Hooks/useAuth";
 
 
 function PrivateRoute({ children, ...rest }) {
-      const {loggedUser,loading} = useAuth();
+      const {loggedUser} = useAuth();
     return (
       <Route
         {...rest}
