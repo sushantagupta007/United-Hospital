@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './SignIn.css';
@@ -15,8 +15,8 @@ const CustomMarginSignForm ={
 
 const SignIn = () => {
         const { register, handleSubmit,reset } = useForm();
-        const {googleSignIn,userSignIn} = useAuth(); 
-        
+        const {googleSignIn,userSignIn,passWordReset} = useAuth(); 
+        const emailRef= useRef()
 
         const location = useLocation(); 
         const history = useHistory(); 
@@ -24,6 +24,7 @@ const SignIn = () => {
         const onSubmit = data => {
             const email = data.email
             const password = data.password
+            
             userSignIn(email,password,location,history)
             console.log(data)
             reset();   
@@ -36,9 +37,9 @@ const SignIn = () => {
         const handleFacebookSign = ()=>{
             console.log("Clicked")
         }
-       
-        const handleClick =() =>{
-            console.log("Clicked")
+     
+        const handlePasswordReset =() =>{
+            history.replace('/passwordreset')
         }
     return (
         <Container fluid id="signMainContainer" >
@@ -55,6 +56,7 @@ const SignIn = () => {
                             <label className='primaryTextColor fw-bold'> Email </label>
                                 
                                     <input 
+                                        ref={emailRef}
                                         style={{fontFamily:"Arial, FontAwesome"}}
                                         className='m-0 px-0 py-2 border-0 border-bottom'
                                         type="text"
@@ -76,7 +78,7 @@ const SignIn = () => {
                         </div>
                     </div>
                     <Container className="d-flex justify-content-end">
-                        <Link onClick={handleClick} className="ms-1 text-secondary text-decoration-none"> Forget Password ?</Link>
+                        <button onClick={handlePasswordReset} className="ms-1 text-secondary text-decoration-none"> Forget Password ?</button>
                     </Container>
                     <Container>
                         <button id="loginBtn" className="w-100 ms-1 btn text-white border rounded" type="submit"> LOGIN</button>

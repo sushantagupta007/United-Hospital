@@ -7,7 +7,20 @@ const Appointment = () => {
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        console.log(data)
+        fetch('https://hospita-app.herokuapp.com/appointment', {
+           
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        }).then(result=>{
+            if(result.status===200){
+                alert("Appointment Registerd Successfully")
+            }
+        })
+            
         reset();
     };
    
@@ -88,7 +101,8 @@ const Appointment = () => {
                             <Col lg={12} xs={12} className="p-0 border-end ">
                                 <textarea 
                                     rows="5"
-                                    placeholder="Message " 
+                                    placeholder="Message "  
+                                    {...register("Message", { required: true})}
                                     className="fontFamilyWork p-2 responsiveWidth primaryBgColor border-bottom border-0 text-white"
                                     style={{resize:'none'}}   
                                 >        

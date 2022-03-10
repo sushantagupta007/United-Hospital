@@ -45,7 +45,7 @@ const Header = () => {
             <NavLink className="text-white customFont me-3" to="/blog">News</NavLink>
             <NavLink className="text-white customFont me-3" to="/contact">Contact</NavLink>
             {/* <NavLink className="text-white customFont me-3" to="/regis"> Registrtion</NavLink> */}
-            <p> Hello Mr. {loggedUser.displayName}</p>
+            <p> Hello Mr. {loggedUser?.displayName}</p>
             
           </Nav>
           <Form className="d-flex justify-content-between ">

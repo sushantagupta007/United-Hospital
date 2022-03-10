@@ -17,21 +17,25 @@ const CustomMarginSignForm ={
 const SignUp = () => {
         const history = useHistory(); 
         const { register, handleSubmit,reset } = useForm();
-        const {userCreate,newUser} = useAuth(); 
+        const {userCreate,newUser,auth,error} = useAuth(); 
         const [newregUser, setNewRegUser] = useState(null)
+       
+
 
         const onSubmit = data => {
             const email= data.email
             const password = data.password
             const name = data.name
-            console.log(data)
+          
             userCreate(name,email,password,history)
-            reset(); 
             
+           if(newUser){
+               alert("Registration Successful")
+           }
+            reset(); 
         };
     
-
-        //Componen update when newUser change. 
+        //Component update when newUser change. 
         useEffect(()=>{
             setTimeout(() => {
                 setNewRegUser(null)

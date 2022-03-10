@@ -15,17 +15,32 @@ fireBaseInitialization();
 const googleProvider = new GoogleAuthProvider();
 const auth = getAuth();
 
+const postNewUser =(name,email)=>{
+    fetch('https://hospita-app.herokuapp.com/newUser', {
+           
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+        body: JSON.stringify({
+            name,
+            email
+        })
+    }).then(result=>console.log(result))
+}
 const useFirebase = () => {
     
 
     const [user,setUser] = useState({})
-    const [error,setError]= useState();
+    const [error,setError]= useState(null);
     const [loggedUser, setLoggUser]= useState({})
+    const [newUser,setNewUser] = useState({})
 
         const verifyEmail =()=>{
             sendEmailVerification(auth.currentUser)
             .then((result) => {
-                setError(result)
+                console.log(result)
             })
         }
         const googleSignIn = (location,history) =>{
@@ -51,26 +66,28 @@ const useFirebase = () => {
                         displayName: name
                         })
                         .then(() => {
+                            console.log("profile update")
+                            console.log(auth.currentUser)
+                            postNewUser(name,email)
                         })
                         .catch((error) => {
                         }); 
-                        
-                        console.log(newUser)
+                        setNewUser(auth.currentUser)
                         history.replace('/');        
                     })
                     .catch((error) => {
-                      console.log(error)
+                        setError(error.code)
                     })     
             }
 
         const passWordReset=(email) =>{
             sendPasswordResetEmail(auth, email)
             .then(() => {
-                // Password reset email sent!
-                // ..
+                alert("Password Reset Email Sent")
             })
             .catch((error) => {
-               console.log(error)
+               const errorCode = error.code
+               setError(errorCode)
             });
         }
         const userSignIn =(email,password,location,history)=>{
@@ -80,19 +97,7 @@ const useFirebase = () => {
                 const user = userCredential.user;
                 
                 setLoggUser(user)
-                // sendSignInLinkToEmail(auth, email, actionCodeSettings)
-                // .then(() => {
-                //     // The link was successfully sent. Inform the user.
-                //     // Save the email locally so you don't need to ask the user for it again
-                //     // if they open the link on the same device.
-                //     window.localStorage.setItem('emailForSignIn', email);
-                //     // ...
-                // })
-                // .catch((error) => {
-                //     const errorCode = error.code;
-                //     const errorMessage = error.message;
-                //     // ...
-                // });
+                
                 const destination = location?.state?.from || '/';
                 history.push(destination);
             })
@@ -114,7 +119,7 @@ const useFirebase = () => {
         useEffect(()=>{
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-                    setLoggUser(user)
+                    setUser(user)
                 } else {
                   setUser({})
                 }
@@ -122,9 +127,11 @@ const useFirebase = () => {
         },[auth])
 
     return ({
+        auth,
         googleSignIn,
         signOutUser, 
         user,
+        newUser,
         userCreate,
         userSignIn,
         loggedUser,

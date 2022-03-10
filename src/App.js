@@ -30,6 +30,7 @@ import DoctorProfile from './Component/DoctorProfile/DoctorProfile';
 
 import SpecialityDetails from './Component/SpecialityDetails/SpecialityDetails';
 import ServiceDetails from './Component/ServiceDetails/ServiceDetails';
+import ForgotPassword from './Component/ForgotPassword/ForgotPassword';
 
 function App() {
 
@@ -73,6 +74,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignUp></SignUp>
+        </Route>
+        <Route path="/passwordreset">
+          <ForgotPassword></ForgotPassword>
         </Route>
         <Route path="/repeatSingle">
          <RepeatSingleNews></RepeatSingleNews>
