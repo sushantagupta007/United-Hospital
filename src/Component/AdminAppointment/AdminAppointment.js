@@ -10,14 +10,14 @@ const AdminAppointment = () => {
     const [afterApproval, setAfterApproval] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5000/appointment')
+        fetch('https://hospita-app.herokuapp.com/appointment')
             .then(res => res.json())
             .then(data => setAppointent(data))
     }, [])
 
     useEffect(()=>{
         let afterApprovalData = []; 
-        fetch('http://localhost:5000/appointment')
+        fetch('https://hospita-app.herokuapp.com/appointment')
         .then(res=>res.json())
         .then(data=>{
             afterApprovalData = data.filter(item=>item.Decision!=='APPROVE')
@@ -30,7 +30,7 @@ const AdminAppointment = () => {
         const id = item._id
         const Decision = {Decision:e.target.innerText}
         console.log(Decision)
-        fetch(`http://localhost:5000/appointment/${id}`, {
+        fetch(`https://hospita-app.herokuapp.com/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const AdminAppointment = () => {
     const handleDelete = (item) => {
         const id=  item._id
         console.log(id)
-        fetch(`http://localhost:5000/appointment/${id}`, {
+        fetch(`https://hospita-app.herokuapp.com/${id}`, {
             method: "DELETE",
             headers: {
                 'Content-type': 'application/json'

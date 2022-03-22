@@ -16,7 +16,7 @@ const AdminReview = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://hospita-app.herokuapp.com/review')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -34,7 +34,7 @@ const AdminReview = () => {
             decision: e.target.innerText
         }
         console.log(decision)
-        fetch(`http://localhost:5000/review/${row}`, {
+        fetch(`https://hospita-app.herokuapp.com/review/${row}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

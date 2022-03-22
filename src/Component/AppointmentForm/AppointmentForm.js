@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 const AppointmentForm = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/appointment', {
+        fetch('https://hospita-app.herokuapp.com/appointment', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',

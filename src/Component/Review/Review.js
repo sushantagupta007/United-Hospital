@@ -9,7 +9,7 @@ const Review = () => {
     const onSubmit = data => {
       
         
-        fetch('http://localhost:5000/review', {
+        fetch('https://hospita-app.herokuapp.com/review', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',

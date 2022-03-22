@@ -14,7 +14,7 @@ const FinalAppointment = () => {
 
     useEffect(()=>{
         let appointmentApprove = []; 
-        fetch('http://localhost:5000/appointment')
+        fetch('https://hospita-app.herokuapp.com/appointment')
         .then(res=>res.json())
         .then(data=>{
             appointmentApprove = data.filter(item=>item.Decision==='APPROVE')
