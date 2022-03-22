@@ -33,6 +33,7 @@ import ServiceDetails from './Component/ServiceDetails/ServiceDetails';
 import ForgotPassword from './Component/ForgotPassword/ForgotPassword';
 import Admin from './Component/Admin/Admin.js'
 import Review from './Component/Review/Review';
+import Billing from './Component/Billing/Billing';
 function App() {
 
   
@@ -90,6 +91,7 @@ function App() {
         </Route>
         <Route path="/admin"> <Admin></Admin></Route>
         <Route path="/review"><Review></Review></Route>
+        <Route path="/billing"> <Billing></Billing></Route>
         <Route exact path="/">
           <Home></Home>
         </Route>
