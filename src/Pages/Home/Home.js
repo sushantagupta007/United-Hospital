@@ -10,6 +10,8 @@ import Care from '../../Component/Care/Care';
 import Services from '../../Component/Services/Services';
 import Appointment from '../../Component/Appointment/Appointment'
 import TopHeader from '../../Component/TopHeader/TopHeader';
+import ReviewCard from './../../Component/ReviewCard/ReviewCard';
+import AppointmentForm from './../../Component/AppointmentForm/AppointmentForm';
 const Home = () => {
     return (
         <Fragment>
@@ -19,8 +21,9 @@ const Home = () => {
             <Care></Care>
             <Services></Services>
             <Speciality></Speciality>
-            <Appointment></Appointment>
+            <AppointmentForm></AppointmentForm>
             <Doctors></Doctors>
+            <ReviewCard></ReviewCard>
             <News></News>
             <Contact></Contact>
             <Footer></Footer>

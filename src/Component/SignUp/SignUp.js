@@ -27,10 +27,11 @@ const SignUp = () => {
             const password = data.password
             const name = data.name
           
-            userCreate(name,email,password,history)
+            userCreate (name,email,password,history)
             
            if(newUser){
                alert("Registration Successful")
+               history.push('/home')
            }
             reset(); 
         };

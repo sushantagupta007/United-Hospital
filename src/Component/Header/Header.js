@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 
 import './Header.css'
 const Header = () => {
-  const {loggedUser,signOutUser}= useAuth(); 
+  const {loggedUser,logOut}= useAuth(); 
 
   const history = useHistory(); 
 
@@ -15,7 +15,7 @@ const Header = () => {
   }
 
   const handleLogout =() =>{
-    signOutUser(); 
+    logOut({}); 
     console.log("Clicked")
   }
   
@@ -39,14 +39,16 @@ const Header = () => {
             style={{ maxHeight: 'auto' }}
             navbarScroll >
             <NavLink className="text-white customFont me-3" to="/home">Home</NavLink>
-            <NavLink className="text-white customFont me-3" to="/about">About us</NavLink>
+            <NavLink className="text-white customFont me-3" to="/about">About Us</NavLink>
             <NavLink className="text-white customFont me-3" to="/service">Services</NavLink>
             <NavLink className="text-white customFont me-3" to="/doctor">Doctors</NavLink>
             <NavLink className="text-white customFont me-3" to="/blog">News</NavLink>
             <NavLink className="text-white customFont me-3" to="/contact">Contact</NavLink>
+            {loggedUser.email==='test@test.com'? <NavLink className="text-white customFont me-3" to="/admin">Admin</NavLink>:"" }
+            {loggedUser.email? <NavLink className="text-white customFont me-3" to="/review">User Review</NavLink>:"" }
+            
             {/* <NavLink className="text-white customFont me-3" to="/regis"> Registrtion</NavLink> */}
             <p> Hello Mr. {loggedUser?.displayName}</p>
-            
           </Nav>
           <Form className="d-flex justify-content-between ">
             <Button type="button" className="bg-transparent border-0"> <i className ="fas fa-search"></i> </Button> 

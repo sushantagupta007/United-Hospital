@@ -15,7 +15,7 @@ const CustomMarginSignForm ={
 
 const SignIn = () => {
         const { register, handleSubmit,reset } = useForm();
-        const {googleSignIn,userSignIn,passWordReset} = useAuth(); 
+        const {googleSign,signInUser,loggedUser, passWordReset} = useAuth(); 
         const emailRef= useRef()
 
         const location = useLocation(); 
@@ -25,18 +25,17 @@ const SignIn = () => {
             const email = data.email
             const password = data.password
             
-            userSignIn(email,password,location,history)
+            signInUser(email,password,history)
             console.log(data)
             reset();   
+           
         };
 
         const handleGoogleSign = ()=>{
-            googleSignIn(location,history); 
+            googleSign(location,history); 
             console.log("clicked")
         }
-        const handleFacebookSign = ()=>{
-            console.log("Clicked")
-        }
+      
      
         const handlePasswordReset =() =>{
             history.replace('/passwordreset')
@@ -93,7 +92,7 @@ const SignIn = () => {
                             <div className="d-flex " >
                                 <Row> 
                                     <Col> <a onClick={handleGoogleSign} > <i style={{backgroundColor:"#1F2B6C"}} className="border rounded-pill fab fa-google p-2 text-white"> </i> </a> </Col>
-                                    <Col> <a onClick={handleFacebookSign}>  <i style={{backgroundColor:"#1F2B6C"}} className="rounded-pill p-2 fab fa-facebook text-white"> </i> </a> </Col>
+                                    
                                 </Row>
                             </div> 
                             

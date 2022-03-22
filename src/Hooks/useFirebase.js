@@ -1,144 +1,157 @@
+import {
+    GoogleAuthProvider, getAuth, signInWithPopup, signOut, onAuthStateChanged, 
+    createUserWithEmailAndPassword, updateProfile, sendEmailVerification, updatePassword,
+    signInWithEmailAndPassword, sendPasswordResetEmail, getIdToken
+  } from "firebase/auth";
+  
+  import { useState, useEffect } from 'react';
+  import fireBaseInitialization from './../Firebase/firebase.init';
 
-import { GoogleAuthProvider,getAuth,signInWithPopup, 
-    signOut,createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,updateProfile,sendEmailVerification,sendPasswordResetEmail } 
+  
+  
+  
+  
+  fireBaseInitialization()
+  const auth = getAuth();
+  
+  
+  
+  const googleProvider = new GoogleAuthProvider();
+  
+  
+  const useFirebase = () => {
+    const [newUser, setNewUser] = useState(null)
+    const [loggedUser,setLoggedUser] = useState({})
+    const [existingUser,setExistingUser] = useState({})
+    const [errors, setError] = useState("")
+  
+    const [loading,setIsLoading] = useState(true); 
+  
+    const googleSign = (location,history) =>{
+        setIsLoading(true)
+        signInWithPopup(auth, googleProvider)
+        .then((result) => {
+            const loggedUser = result.user;
+            setLoggedUser(loggedUser)
+            const destination = location?.state?.from || '/';
+            history.push(destination);
+            setIsLoading(true)
+        }).catch((error) => {
+            // Handle Errors here.
+        }).finally(setIsLoading(false))
+    }
+  
     
-from "firebase/auth";
-
-import fireBaseInitialization from '../Firebase/firebase.init';
-import { useState, useEffect } from 'react';
-
-
-//Initialization of Auth
-fireBaseInitialization(); 
-const googleProvider = new GoogleAuthProvider();
-const auth = getAuth();
-
-const postNewUser =(name,email)=>{
-    fetch('https://hospita-app.herokuapp.com/newUser', {
-           
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-        body: JSON.stringify({
-            name,
-            email
-        })
-    }).then(result=>console.log(result))
-}
-const useFirebase = () => {
-    
-
-    const [user,setUser] = useState({})
-    const [error,setError]= useState(null);
-    const [loggedUser, setLoggUser]= useState({})
-    const [newUser,setNewUser] = useState({})
-
-        const verifyEmail =()=>{
-            sendEmailVerification(auth.currentUser)
+    const logOut = (history) => {
+        const auth = getAuth();
+        signOut(auth).then(() => {
+          setLoggedUser({})
+        }).catch((error) => {
+            setError(error)
+        });
+        // history.replace('/home')
+    }
+  
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
             .then((result) => {
-                console.log(result)
+                setError(result)
+  
             })
-        }
-        const googleSignIn = (location,history) =>{
-            signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const loggedUser = result.user;
-                setLoggUser(loggedUser)
-                const destination = location?.state?.from || '/';
-                history.push(destination);
-            }).catch((error) => {
-                // Handle Errors here.
-            });
-        }
-
-        const userCreate =(name,email,password,history) =>{
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                   
-                    //User Create after registration
-                    const newUser = { email, displayName: name }; 
-                    verifyEmail();
-                    updateProfile(auth.currentUser, {
-                        displayName: name
-                        })
-                        .then(() => {
-                            console.log("profile update")
-                            console.log(auth.currentUser)
-                            postNewUser(name,email)
-                        })
-                        .catch((error) => {
-                        }); 
-                        setNewUser(auth.currentUser)
-                        history.replace('/');        
+    }
+    useEffect(()=>{
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setExistingUser(user)
+            } else {
+              
+            }
+          });
+    },[auth])
+  
+    const userCreate = (name, email, password, phone, history) => {
+        setIsLoading(true)
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                //User Create after registration
+                const newUser = { email, displayName: name, phoneNumber: phone };
+                setNewUser(newUser)       
+                updateProfile(auth.currentUser, {
+                    displayName: newUser.displayName,
+                })
+                    .then(() => {
+                        setNewUser(newUser)
                     })
                     .catch((error) => {
-                        setError(error.code)
-                    })     
-            }
-
-        const passWordReset=(email) =>{
-            sendPasswordResetEmail(auth, email)
+                    });
+                
+            })
+            .catch((error) => {
+                console.log(error)
+            }).finally(setIsLoading(false))
+    }
+  
+    const resetPassword = (email, history) => {
+        sendPasswordResetEmail(auth, email)
             .then(() => {
                 alert("Password Reset Email Sent")
             })
             .catch((error) => {
-               const errorCode = error.code
-               setError(errorCode)
+                setError(error)
             });
-        }
-        const userSignIn =(email,password,location,history)=>{
-            signInWithEmailAndPassword(auth, email, password)
+  
+    }
+  
+    const signInUser = (email, password, history) => {
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
                 const user = userCredential.user;
-                
-                setLoggUser(user)
-                
-                const destination = location?.state?.from || '/';
-                history.push(destination);
+                setLoggedUser(user)
+                if (user) {
+                    history.replace('/home')
+                }
+                console.log(user)
             })
             .catch((error) => {
-                console.log(error)
+
             });
-        }
+    }
 
-        const signOutUser = ()=>{
-            signOut(auth).then(() => {
-                setLoggUser({})
-                console.log(user)
-              }).catch((error) => {
-                console.log(error)
-              });
-        }
-
-        //It activates when user login/logout state change
-        useEffect(()=>{
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    setUser(user)
-                } else {
-                  setUser({})
-                }
-              });
-        },[auth])
-
+  
+  
+  
+  
+    const updatePass = (newpassword, history) => {
+  
+        const user = auth.currentUser;
+        const newPassword = newpassword
+  
+        updatePassword(user, newPassword).then(() => {
+            if (newPassword) {
+                alert("Password Update Successfully")
+                history.replace('/signin')
+            }
+        }).catch((error) => {
+            console.log(error)
+        });
+    }
+  
     return ({
-        auth,
-        googleSignIn,
-        signOutUser, 
-        user,
-        newUser,
+        googleSign,
+        logOut,
+      
         userCreate,
-        userSignIn,
-        loggedUser,
-        error,
-        passWordReset
-        }   
-    );
-};
-
-export default useFirebase;
+        resetPassword,
+        signInUser,
+        updatePass,
+        newUser,
+        errors,
+        loading,
+        existingUser,
+        loggedUser
+  
+    })
+  
+  }
+  
+  export default useFirebase; 

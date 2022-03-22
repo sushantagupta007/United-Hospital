@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css'; 
 
 
-import BlackDoctor from '../../Image/Doctor.png';
+import BlackDoctor from  '../../Image/Doctor.png'
 
 
 // const h3 ={
