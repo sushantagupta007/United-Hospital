@@ -30,7 +30,7 @@ const AdminAppointment = () => {
         const id = item._id
         const Decision = {Decision:e.target.innerText}
         console.log(Decision)
-        fetch(`https://hospita-app.herokuapp.com/${id}`, {
+        fetch(`https://hospita-app.herokuapp.com/appointment/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const AdminAppointment = () => {
     const handleDelete = (item) => {
         const id=  item._id
         console.log(id)
-        fetch(`https://hospita-app.herokuapp.com/${id}`, {
+        fetch(`https://hospita-app.herokuapp.com/appointment/${id}`, {
             method: "DELETE",
             headers: {
                 'Content-type': 'application/json'
